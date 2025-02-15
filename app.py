@@ -1,22 +1,14 @@
-from flask import Flask, request, make_response
+from flask import Flask, request, make_response # type: ignore
+from flask_cors import CORS,cross_origin # type: ignore
 import json
-from flask_cors import CORS,cross_origin
-from weather import Weather
-import logging
+
+from weather_condition import Weather
 
 app = Flask(__name__)
 CORS(app)
 
 #weather_data = WeatherData()
 weather = Weather()
-
-# Configure the logger
-logging.basicConfig(
-    filename='weather_query.log',  # Name of the log file
-    level=logging.DEBUG,  # Set the logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',  # Log message format
-    datefmt='%Y-%m-%d %H:%M:%S'  # Date format
-)
 
 @app.route('/')
 def index():

@@ -53,10 +53,12 @@ Google Dialogflow documentation:
 
 Webhook and Ngrok
 
+...
+
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/project-name.git
-cd project-name
+git clone https://github.com/MKalder/ai_weather_chatbot.git
+cd src
 
 # Install dependencies
 pip install -r requirements.txt

@@ -7,12 +7,12 @@ import precipitation
 FMT = "%Y-%m-%d"
 
 # Configure the logger
-logging.basicConfig(
-    filename='weather_query.log',  # Name of the log file
-    level=logging.DEBUG,  # Set the logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',  # Log message format
-    datefmt='%Y-%m-%d %H:%M:%S'  # Date format
-)
+# logging.basicConfig(
+#     filename='weather_query.log',  # Name of the log file
+#     level=logging.DEBUG,  # Set the logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+#     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',  # Log message format
+#     datefmt='%Y-%m-%d %H:%M:%S'  # Date format
+# )
 
 class DialogHandler:
     def __init__(self):
