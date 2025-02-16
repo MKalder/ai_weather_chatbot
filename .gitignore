@@ -1,1 +1,7 @@
 .env
+.chatbot/
+__pycache__/
+*.py[cod]
+*$py.class
+weather_query.log
+.pytest_cache/
