@@ -4,8 +4,11 @@ __author__ = "Marius Kalder"
 __email__ = "aiweatherchatbot@mariuskalder.io"
 __status__ = "Production"
 
-from .weather import Weather
 import logging
+
+from .weather import Weather
+from .dialog import DialogHandler
+from .precipitation import condition_emojis, temperature_emojis, wind_speed_emojis
 
 logging.basicConfig(
     filename='weather_query.log',  # Name of the log file

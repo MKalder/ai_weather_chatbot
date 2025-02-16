@@ -1,10 +1,11 @@
-import requests
 from datetime import datetime, timedelta
-from dateutil import parser
-import logging
-import dialog_class as dialog
+from dateutil import parser 
 from dotenv import load_dotenv
+import logging
+import requests 
 import os 
+
+from .dialog import DialogHandler
 
 # Load the .env file
 load_dotenv()
@@ -32,7 +33,7 @@ class Weather:
         self.condition = None  # Weather condition
         self.temperature = None  # Temperature data
         self.wind_speed = None  # Wind speed data
-        self.dialog_handler = dialog.DialogHandler()  # Handler for dialog responses
+        self.dialog_handler = DialogHandler()  # Handler for dialog responses
         
     def __fetch_weather_forecast_data(self):
         """Fetches weather forecast data from OpenWeatherMap API for a specified city.

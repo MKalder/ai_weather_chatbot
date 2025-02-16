@@ -1,8 +1,8 @@
-from flask import Flask, request, make_response # type: ignore
-from flask_cors import CORS,cross_origin # type: ignore
+from flask import Flask, request, make_response 
+from flask_cors import CORS,cross_origin 
 import json
 
-from weather_condition import Weather
+from weather_condition.weather import Weather
 
 app = Flask(__name__)
 CORS(app)

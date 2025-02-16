@@ -1,8 +1,9 @@
-import random
 from collections import defaultdict, Counter
 from datetime import datetime
+import random
 import logging
-import precipitation
+
+from weather_condition.precipitation import condition_emojis, temperature_emojis, wind_speed_emojis
 
 FMT = "%Y-%m-%d"
 
@@ -24,7 +25,6 @@ class DialogHandler:
 
         Optionally, initialize any state you want to track within the dialog
         """
-        # Optionally, initialize any state you want to track within the dialog
         pass
 
     def handle_past_date(self) -> dict:
@@ -37,10 +37,7 @@ class DialogHandler:
             "I can only give forecasts for today and the next 5 days. ☀️🌧️",
             "I can only provide weather data for today and up to 5 days ahead. ⏳",
             "I only have forecasts for today and the next 5 days. Ask away! 😊",
-            "Need a forecast? I cover today and the next 5 days! 🌍",
-            "I'm sorry, but I can't fetch weather data for the past.",
-            "I'm sorry, but I can't provide weather data for the past.",
-            "I'm sorry, but I can't provide weather data for the past."
+            "Need a forecast? I cover today and the next 5 days! 🌍"
         ]
         resp = random.choice(responses)
         return {
@@ -179,7 +176,7 @@ class DialogHandler:
             print(f"Attribute List: {attribute_list}")
             
             # Get the emoji for the first attribute in the list, if it exists
-            return precipitation.condition_emojis.get(attribute_list[0].lower(), None)
+            return condition_emojis.get(attribute_list[0].lower(), None)
         
         # Return None if the attribute list is empty
         return None
