@@ -5,14 +5,13 @@ Here’s a ready-to-use README.md template with placeholders:
 <img src="images/weather_chatbot.png" alt="Chatbot" width="20%">
 
 ## Description
-The Weather Chatbot is designed to provide instant and interactive weather updates via natural language queries, offering a user-friendly alternative to traditional weather apps. 
+The Weather Chatbot is designed to provide real-time and interactive weather updates through natural language queries, offering a more intuitive and user-friendly alternative to conventional weather applications.
 
-The reason why I have devolped such a bot was manly driven by curiosity. I want to understand how conversational AI works because it is a very powerful tool to solve a lot of problems. Furthermore I wanted to figure out, how seamlessy and intuitive I can teak an dedicated chatbotbot with free available software. 
+The primary motivation behind developing this chatbot stemmed from a deep curiosity about conversational AI and its potential to address a wide range of practical challenges. Additionally, this project served as an exploration into the seamless integration of a dedicated chatbot using freely available software. The objective was to assess how effectively such a system could be tailored for natural and intuitive user interactions.
 
-The result can be tested here: https://mariuskalder.io/ai-weather-chatbot/ 
+The chatbot is available for testing here: https://mariuskalder.io/ai-weather-chatbot/ 
 
-From my point of view this project is a good start to learn and dig deeper into the fundamentals of Natural Langauge Processing (NLP). 
-Although Google Dialogflow ES handles the things like Tokenization, Normalization, Stemming and and Named Entity Recognition on its own, you are in charge of letting the model train based on your provided trainingdata (intents) as well as guiding your users with the help of setting the correct context plus the right focus on entities to give a satisfying answer.   
+From a technical perspective, this project provides a solid foundation for further exploration into the core principles of Natural Language Processing (NLP). While Google Dialogflow ES handles essential NLP tasks such as tokenization, normalization, stemming, and named entity recognition autonomously, developers retain significant control over model training. This includes curating training data (intents), defining context to steer user interactions effectively, and optimizing entity recognition to ensure precise and contextually relevant responses. 
 
 ## Architecture
 
@@ -47,7 +46,7 @@ Follow these steps to run the chatbot within the Google Diaogflow ES Website and
 
 Google Dialogflow documentation: 
 
-...
+
 
 ## Set up Webhook 
 
