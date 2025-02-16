@@ -30,52 +30,54 @@ The chatbot follows a modular architecture with three key components:
 
 ## Technology Used
 
-- Google Dialogflow ES: Simplifies NLP processing and multi-platform integration (free version).
+- Google Dialogflow ES (GDF): Simplifies NLP processing and multi-platform integration (free version).
 - OpenWeatherMap API: Chosen for its reliability and extensive free data access (free version).
 - Flask Webhook: Handles API calls and responses, hosted on Pythonanywhere (free trial available - up to 3 months hosting).
 - Ngrok: To create a secure tunnel from your local machine to the internet (free version)
 - My Website: Embedded the chatbot into a Blogpost 
-- Git and GitHub 
 
 # Installation
 Follow these steps to run the chatbot within the Google Diaogflow ES Website and a locally hosted webhook. 
 
 ## Set up Google Dialogflow
 
-Google Dialogflow documentation: https://cloud.google.com/dialogflow/es/docs 
+Google Dialogflow Documentation: GDF Docs
 
-The folder google_dialogflow_es contains the subfolders: 
-
+The folder google_dialogflow_es contains the following subfolders:
 1. entities
 2. intents
 
-## Set up Webhook 
+Inside these folders, you will find JSON files that need to be uploaded to Dialogflow. The intents and entities serve as training data to help the bot understand different types of questions and identify relevant entities.
 
-Webhook and Ngrok
+The complete setup guide can be downloaded from my blog post: [Insert Link]
 
-...
+## Set Up Webhook
+
+There are several ways to connect a Flask web application locally with Google Dialogflow (GDF). I personally prefer Ngrok because it’s easy to set up and use. You can find the Ngrok setup guide here: LINK
+
+Steps to Set Up Your Webhook
+
+1. Install Ngrok and start it to expose your local server.
+
+2. Clone the repository:
 
 ```bash
-# Clone the repository
 git clone https://github.com/MKalder/ai_weather_chatbot.git
-cd src
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
-python main.py
 ```
 
-## Usage
+3. Install dependencies:
 
-Explain how to use your project. Include examples and screenshots if necessary.
+```bash
+pip install -r requirements.txt
+```
 
-## Configuration
+4. Run the application:
 
-Provide details on how to configure the project (e.g., environment variables, API keys).
+```bash
+python app.py
+```
 
-
+Once the application is running, use Ngrok to generate a public URL and configure it in Dialogflow as your webhook endpoint.
 
 # License
 
@@ -85,6 +87,6 @@ This project is licensed under the MIT License
 
 For questions or support, please contact me:
 Email: aiweatherchatbot@mariuskalder.io
-LinkedIn: 
+LinkedIn: https://www.linkedin.com/in/marius-kalder/
 
 
