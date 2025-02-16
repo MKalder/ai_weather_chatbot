@@ -2,7 +2,7 @@ __version__ = "0.1.0"
 __date__ = "2025-02-15"
 __author__ = "Marius Kalder"
 __email__ = "aiweatherchatbot@mariuskalder.io"
-__status__ = "Production"
+__status__ = "Developement"
 
 import logging
 
