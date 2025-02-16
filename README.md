@@ -1,5 +1,3 @@
-Here’s a ready-to-use README.md template with placeholders:
-
 # AI Weather Chatbot
 
 <img src="images/weather_chatbot.png" alt="Chatbot" width="20%">
@@ -44,9 +42,12 @@ Follow these steps to run the chatbot within the Google Diaogflow ES Website and
 
 ## Set up Google Dialogflow
 
-Google Dialogflow documentation: 
+Google Dialogflow documentation: https://cloud.google.com/dialogflow/es/docs 
 
+The folder google_dialogflow_es contains the subfolders: 
 
+1. entities
+2. intents
 
 ## Set up Webhook 
 
