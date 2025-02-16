@@ -1,0 +1,494 @@
+{
+  "id": "f639d6dc-ca2f-4589-9233-42366a698357",
+  "name": "feedback.negative",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "We’re really sorry to hear that. We appreciate your feedback and will work on improving the experience.",
+            "Thanks for bringing this to our attention. We apologize for the inconvenience and are actively working on resolving the issue.",
+            "We understand your frustration, and we sincerely apologize. Your feedback helps us improve, and we’re on it!",
+            "We’re sorry you’re not satisfied with the service. We value your input and will take it into consideration as we make improvements.",
+            "Apologies for the experience you had. We’re looking into this and will work hard to resolve the issue as quickly as possible.",
+            "Thank you for your feedback. We apologize for not meeting your expectations, and we’ll make every effort to improve the situation.",
+            "We’re sorry for the trouble you’re facing. We’re continuously working on enhancements, and your feedback is important to us.",
+            "We apologize for the inconvenience caused. Your feedback is vital in helping us make the necessary improvements.",
+            "Sorry to hear about your experience. We are committed to improving, and your input will guide our future updates",
+            "We truly apologize for any frustration this may have caused. We’re working to make things better and appreciate your patience."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i hate this service",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4acd5e0e-733d-4223-b9f5-3be5453c2476",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What a really bad experience!!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "12322334-3cd2-4126-a0c1-f48ba8419f63",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Ohh this application is so bad!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "eef3befa-660e-4497-b127-eb181f342970",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'm not impressed with the accuracy. The forecast is always off.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "68725062-ce4c-4ca7-a4fe-3af58ddd9ed9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I expected more from this app. It doesn't have the features I need.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d186abc7-86bf-4af3-a7e1-633fd8a6ca89",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'm frustrated because the app is constantly giving me wrong weather data.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "af573978-3e89-4ce9-a33c-bbb8dd67f8c9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I thought the service would be more intuitive, but I'm having trouble finding features.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d8cc5ed5-7342-4b5e-a209-ab47ddc17ca5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The information is outdated. I checked the forecast, but it doesn't match the current weather.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "94f3f359-aaec-447e-90a3-35fbf8503ef5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'm not getting push notifications, even though I enabled them.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ae4afd1b-b98e-442a-932d-a32342537b31",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "This app isn't working as I thought it would. It doesn't provide accurate forecasts.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d773410a-7fd8-4845-b4e4-6645a225800b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I don't find the information detailed enough. I need more specifics on the weather.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c30897a2-324a-42f2-a5c7-0919a8e76f54",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The location feature is broken. It's not showing the correct city.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "df6d7f67-5487-4bff-9655-4b3c56567d3d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'm not happy with the service. It's not what I expected from a weather app.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "600841bf-f1d9-419d-b8dc-a1ffcec3eae1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I thought this would be more reliable. The weather updates are often wrong.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9433b987-bbf9-47c9-b6e9-e837e73d9773",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The app keeps crashing, and I can't get the updates I need.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "34e75ea8-7d22-4262-8cd9-77d3f84cf431",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I don't like the interface. It's hard to navigate and find what I need.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2ff4d161-5492-4c35-adc1-dfdeba49563d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I expected better performance from the app. It's been really slow lately.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "faba4f02-2712-4f90-acef-e07b6e52a999",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'm really disappointed with how the app is working. It keeps freezing.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ea3f601a-bff8-4eba-b03e-86b91c8dbe6f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "This isn't what I was hoping for. The forecasts aren't accurate enough.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "779923c6-7ba7-482d-a760-7b2b13ac73f3",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'm getting frustrated with the service. It's not as good as I expected.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "e107d391-92fb-4b61-a644-ad481a448927",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The GPS location is not accurate. It's showing the wrong city.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ba6d3057-83b0-48c7-9f13-c74d0e888920",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The app won't load. I can't check the weather at all!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ed4cc044-3287-4b17-91c6-fd22f40a6d0b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The weather icons don't make sense to me—what do they mean?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "384050e8-57e9-4285-85e0-99be607e08d5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I can't find hourly weather updates—why is that missing?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "503ac413-c156-469d-8193-23c5d6a6b46f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "There was no information about the storm that's coming!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "90a3c6d3-e134-4566-9b67-8a19f1b5ae0b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I received weather alerts for a different location, not mine!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "7820f3cc-79fb-424e-af98-ac581059fb6e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'm not getting push notifications even though I enabled them.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "0d3d32f3-32a0-4cda-b914-369ad4146607",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The interface is confusing, I can't find what I need.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "67b27501-4e5e-4669-84d3-77f6d14e4104",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The app keeps crashing when I try to check the forecast!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2c439589-b5cf-40ff-a492-d825cbdba377",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The units are incorrect! I selected Celsius, but it shows Fahrenheit.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "aa6b1e27-d3cb-4b3a-87b9-e852b0a3579e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The data is outdated. The forecast has already changed!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5f8a0f4e-4ea9-43a7-935e-b46bf56e1ac5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The chatbot can't find my location for weather updates!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "85df98af-00d5-4d68-81bc-a5b9fa78e7f3",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The forecast is too vague. I need more details!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "334122a9-ebcf-44f7-9ba9-b639d03d3194",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The chatbot takes forever to reply!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9bddcaf3-3a5f-4325-b016-b39c181804b0",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The temperature you showed is way off from what I'm experiencing!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3aa4a09a-ba76-4ce4-a614-e3c2a3f71d0e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I didn't get the weather update in time!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2f6c79ba-daba-4d61-9d87-38f0b2c02764",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The weather forecast was completely wrong today!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6d5f73a9-7934-4d46-a493-68b99991402f",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

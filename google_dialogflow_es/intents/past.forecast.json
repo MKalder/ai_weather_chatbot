@@ -1,0 +1,474 @@
+{
+  "id": "77e3f9bd-1967-4db1-9622-3255bf60e2fb",
+  "name": "past.forecast",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "geo-city",
+          "dataType": "@sys.geo-city",
+          "isList": true,
+          "required": false,
+          "prompts": [],
+          "value": "$geo-city",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "weather-condition",
+          "dataType": "@weather-condition",
+          "isList": true,
+          "required": false,
+          "prompts": [],
+          "value": "$weather-condition",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "past",
+          "dataType": "@past",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$past",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "I can't retrieve past forecasts. Ask me about future dates! ⏳",
+            "I can’t change the past, but I can predict the future! Ask me about upcoming weather. ☀️🌧️",
+            "I don’t have a time machine, but I do have a forecast! Try asking about future dates. ⏳😊",
+            "I can’t look back, but I can look ahead! Ask me about the weather coming up. ☀️🔮",
+            "Past weather is history! Let’s talk about what’s ahead. Ask me about future forecasts. 🌍⏳",
+            "I’m all about the future! Try asking for a forecast instead of a recap. 😉☁️",
+            "If only I had a rewind button! But I can tell you what’s coming next. Ask me about future weather! 🎛️🌦️",
+            "Yesterday’s weather is old news, but I’ve got fresh forecasts for you! What date are you curious about? 📅🌤️"
+          ]
+        },
+        {
+          "type": "custom_payload",
+          "condition": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "🌤 Today's Weather"
+                    },
+                    {
+                      "text": "📅 Next five days report"
+                    },
+                    {
+                      "text": "☀️ Today's Temperature"
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "and the ",
+          "userDefined": false
+        },
+        {
+          "text": "last 5 days",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5a6b6901-aa42-4729-91fd-09ee30958a1f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "yesterdays",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        },
+        {
+          "text": " weather?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "e20889ca-d02c-4010-879f-cf4ecb4414d4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tell me the weather for ",
+          "userDefined": false
+        },
+        {
+          "text": "yesterday",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        }
+      ],
+      "count": 0,
+      "id": "d43f3f6e-3b01-44b2-a107-4ae3f7f2ad71",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Forecast for the last ",
+          "userDefined": false
+        },
+        {
+          "text": "four days ago",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        }
+      ],
+      "count": 0,
+      "id": "523de602-b937-42f2-82cb-21dad63e6d29",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "The weather in ",
+          "userDefined": false
+        },
+        {
+          "text": "Vientiane",
+          "userDefined": false,
+          "alias": "geo-city",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "last Wednesday",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        }
+      ],
+      "count": 0,
+      "id": "f8c6e4e7-2cae-4ee2-aaa5-c42e904dc1f2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Weather in ",
+          "userDefined": false
+        },
+        {
+          "text": "Kuala Lumpur",
+          "userDefined": false,
+          "alias": "geo-city",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "last month",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        }
+      ],
+      "count": 0,
+      "id": "eaf0bc7f-b48e-418d-b00a-1c6298617653",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Weather in ",
+          "userDefined": false
+        },
+        {
+          "text": "Manila",
+          "userDefined": false,
+          "alias": "geo-city",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "three days ago",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        }
+      ],
+      "count": 0,
+      "id": "ed5c073f-83ea-455e-a670-56aaa4549ac8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Weather in ",
+          "userDefined": false
+        },
+        {
+          "text": "Bali",
+          "userDefined": false,
+          "alias": "geo-city",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "last week",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        }
+      ],
+      "count": 0,
+      "id": "e0fb5648-503b-43d6-9261-6bc5d5b3049f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Weather in ",
+          "userDefined": false
+        },
+        {
+          "text": "Ho Chi Minh City",
+          "userDefined": false,
+          "alias": "geo-city",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "two days ago",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        }
+      ],
+      "count": 0,
+      "id": "8332a07a-a584-412b-90d5-239991d819c2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Weather in ",
+          "userDefined": false
+        },
+        {
+          "text": "Phuket",
+          "userDefined": false,
+          "alias": "geo-city",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "last Monday",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        }
+      ],
+      "count": 0,
+      "id": "ea784c65-37fd-43c3-a55e-000e60fb1ac9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What was the temperature in ",
+          "userDefined": false
+        },
+        {
+          "text": "Phuket",
+          "userDefined": false,
+          "alias": "geo-city",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "two days ago",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "691b810c-9e88-404f-b3ba-1fec2fd84851",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Can you tell me how ",
+          "userDefined": false
+        },
+        {
+          "text": "hot",
+          "userDefined": true,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " it was in ",
+          "userDefined": false
+        },
+        {
+          "text": "Bangkok",
+          "userDefined": false,
+          "alias": "geo-city",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "last week",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "919ff69f-33b9-4b0c-8f65-a7c36fbf1f4d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Show me the forecast for ",
+          "userDefined": false
+        },
+        {
+          "text": "last Monday",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8e70a19c-31a7-44ff-a0a3-d3bed535d78a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What was the weather like ",
+          "userDefined": false
+        },
+        {
+          "text": "yesterday",
+          "userDefined": true,
+          "alias": "past",
+          "meta": "@past"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d634f63b-ef45-43e6-8057-dedf3818655d",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

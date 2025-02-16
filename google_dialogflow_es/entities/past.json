@@ -1,0 +1,65 @@
+{
+  "isRegexp": false,
+  "isEnum": false,
+  "allowFuzzyExtraction": false,
+  "name": "past",
+  "automatedExpansion": false,
+  "entries": [
+    {
+      "value": "yesterday",
+      "synonyms": [
+        "yesterday"
+      ]
+    },
+    {
+      "value": "last week",
+      "synonyms": [
+        "last week"
+      ]
+    },
+    {
+      "value": "last Monday",
+      "synonyms": [
+        "last Monday"
+      ]
+    },
+    {
+      "value": "last Friday",
+      "synonyms": [
+        "last Friday"
+      ]
+    },
+    {
+      "value": "last month",
+      "synonyms": [
+        "last month"
+      ]
+    },
+    {
+      "value": "past days",
+      "synonyms": [
+        "past days"
+      ]
+    },
+    {
+      "value": "in the past",
+      "synonyms": [
+        "in the past"
+      ]
+    },
+    {
+      "value": "two days ago",
+      "synonyms": [
+        "two days ago"
+      ]
+    },
+    {
+      "value": "ago",
+      "synonyms": [
+        "ago"
+      ]
+    }
+  ],
+  "id": "846166c6-8252-44c1-b096-9aadba57ad06",
+  "isOverridable": false
+}

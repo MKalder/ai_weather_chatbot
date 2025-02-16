@@ -1,0 +1,1185 @@
+{
+  "id": "dd3941ef-3445-4f9b-8610-ddaf74e0895c",
+  "name": "condition.followup",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "weather-check"
+  ],
+  "contexts": [
+    "weather-check"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "weather-check",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "weather-condition",
+          "dataType": "@weather-condition",
+          "isList": true,
+          "required": false,
+          "prompts": [],
+          "value": "$weather-condition",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "date-time",
+          "dataType": "@sys.date-time",
+          "isList": true,
+          "required": false,
+          "prompts": [],
+          "value": "$date-time",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "will it ",
+          "userDefined": false
+        },
+        {
+          "text": "rain",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "eb87276f-05c0-4950-8510-973f90540ac5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "will it be ",
+          "userDefined": false
+        },
+        {
+          "text": "sunny",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "db6127db-cb0a-4bb5-b1dd-8ee22c5609b7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "will it also ",
+          "userDefined": false
+        },
+        {
+          "text": "rain",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " for the ",
+          "userDefined": false
+        },
+        {
+          "text": "next 5 days",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "83b5f0e2-6a51-41b4-85ac-ae5b2a4aafe7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it ",
+          "userDefined": false
+        },
+        {
+          "text": "rain",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "tomorrow",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "17a56699-1a7b-46ea-bcac-1047386caaa4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it ",
+          "userDefined": false
+        },
+        {
+          "text": "snow",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " for ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "931fa836-efcd-454d-8ff7-14f585e66659",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it ",
+          "userDefined": false
+        },
+        {
+          "text": "rain",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a8350ab1-b5f8-4baf-a8db-3ef672effacb",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How ",
+          "userDefined": false
+        },
+        {
+          "text": "foggy",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " is it outside?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5d329b0d-010e-4038-86c6-e18c175199c8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is there a ",
+          "userDefined": false
+        },
+        {
+          "text": "blizzard",
+          "userDefined": true,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " warning?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "0aea8f8e-1bda-494d-8a97-4d7734dfbd14",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Are the roads slippery due to ",
+          "userDefined": false
+        },
+        {
+          "text": "ice",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "39d94fcc-7f0a-4001-86f2-ec0a7c9dbcb1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is ",
+          "userDefined": false
+        },
+        {
+          "text": "ice",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " a risk ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "483bb22e-cb05-4cc0-bce5-d6eaa899a470",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How much ",
+          "userDefined": false
+        },
+        {
+          "text": "snow",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " is expected?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "33354c80-ae05-42f9-b5b2-a88f8b4b3bc8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is it going to ",
+          "userDefined": false
+        },
+        {
+          "text": "snow",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "this weekend",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b75fb3be-1a42-4413-89d8-cc4dbb91f4c6",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will I hear ",
+          "userDefined": false
+        },
+        {
+          "text": "thunder",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "tonight",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b4a70a2d-e3e6-4418-902f-5d1205b4cabe",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How long will the ",
+          "userDefined": false
+        },
+        {
+          "text": "drizzle",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " last?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3fbd5c13-c9c7-4a1d-94f8-750a67b4c01a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is a ",
+          "userDefined": false
+        },
+        {
+          "text": "thunderstorm",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "coming soon",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "7cba2e6b-0b5f-47c1-9a8e-0266c71c3448",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Should I expect ",
+          "userDefined": false
+        },
+        {
+          "text": "heavy rain",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "tonight",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6c928351-2421-4160-94ec-42ad03da020f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is it going to ",
+          "userDefined": false
+        },
+        {
+          "text": "pour down",
+          "userDefined": true,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " later?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3055082b-02df-4c14-9901-c05dc1b44de8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it stay ",
+          "userDefined": false
+        },
+        {
+          "text": "overcast",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " the ",
+          "userDefined": false
+        },
+        {
+          "text": "whole day",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "186ef967-5ca2-4d41-8211-69e339c1afbd",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will the ",
+          "userDefined": false
+        },
+        {
+          "text": "sun",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " be out in the ",
+          "userDefined": false
+        },
+        {
+          "text": "afternoon",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9fe9a855-e36f-4a90-9a2f-fbfa3d6342ce",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it be ",
+          "userDefined": false
+        },
+        {
+          "text": "cloudy",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " the ",
+          "userDefined": false
+        },
+        {
+          "text": "whole day",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b09d73b1-eae6-4484-b5fe-5c260512e1e8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is it going to be ",
+          "userDefined": false
+        },
+        {
+          "text": "clear",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " skies ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c5caa55e-ac02-47c8-aeed-4458f0f8ac73",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is there a ",
+          "userDefined": false
+        },
+        {
+          "text": "tornado",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " risk ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9f4bb33e-2c52-4dd6-958f-1e25af73869e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Are strong ",
+          "userDefined": false
+        },
+        {
+          "text": "squalls",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " expected later?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "144b027d-75ba-4929-b322-ca96e295f2bd",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Are there any ",
+          "userDefined": false
+        },
+        {
+          "text": "clouds",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6eac15c1-17cb-4eb4-a3d8-11a41de1dff5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will ",
+          "userDefined": false
+        },
+        {
+          "text": "volcanic ash",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " affect air quality?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "52783939-dfd3-432f-ab93-19a101247346",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is there a ",
+          "userDefined": false
+        },
+        {
+          "text": "sandstorm",
+          "userDefined": true,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " warning?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b6754ad0-c730-4d78-8045-ff922e5c2d43",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will ",
+          "userDefined": false
+        },
+        {
+          "text": "fog",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " affect visibility ",
+          "userDefined": false
+        },
+        {
+          "text": "this morning",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a9c9d4f1-9f0c-4be7-a9bd-4f0d1872f9b2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is there ",
+          "userDefined": false
+        },
+        {
+          "text": "dust",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " in the air ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ade3e346-2eaf-422e-8536-2e0d1a14da8e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How ",
+          "userDefined": false
+        },
+        {
+          "text": "hazy",
+          "userDefined": true,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " is it ",
+          "userDefined": false
+        },
+        {
+          "text": "right now",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "cc32fc5a-21cf-4655-b0c6-bf9a13e9dd0d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is it ",
+          "userDefined": false
+        },
+        {
+          "text": "smoky",
+          "userDefined": true,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " outside ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8ca27649-b3a1-44bb-9199-dfabd8f3a4d7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will there be ",
+          "userDefined": false
+        },
+        {
+          "text": "mist",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " in the early hours?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2a7c78ac-7e8f-4c4f-a523-ea0369f95d2b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is it going to ",
+          "userDefined": false
+        },
+        {
+          "text": "snow",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "tonight",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "7aaeba69-15a0-4a4e-a998-a9f71f9e0b1b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it ",
+          "userDefined": false
+        },
+        {
+          "text": "drizzle",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " in the ",
+          "userDefined": false
+        },
+        {
+          "text": "morning",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f544f7fb-f26a-41cb-bd61-d2fa60870145",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is it going to ",
+          "userDefined": false
+        },
+        {
+          "text": "snow",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "in 5 days",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8ecf5525-0861-483e-b8a2-a59ef97f40e0",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Are ",
+          "userDefined": false
+        },
+        {
+          "text": "thunderstorms",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " expected?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2f047ea3-bc04-4285-a545-8d8a47a34c49",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is there a chance of ",
+          "userDefined": false
+        },
+        {
+          "text": "rain",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " later on?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b0fe6e8f-9f74-4172-a76c-ede0afc7cb95",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "☀️?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "40152b08-d1f0-4cf9-86b3-38c9a6501d81",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it be ",
+          "userDefined": false
+        },
+        {
+          "text": "sunny",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ed1a5089-fb33-4052-9890-5e26812cc502",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is it ",
+          "userDefined": false
+        },
+        {
+          "text": "snowy",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a94a12c1-cad3-49ee-b9dc-62d452c85b9d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it ",
+          "userDefined": false
+        },
+        {
+          "text": "rain",
+          "userDefined": false,
+          "alias": "weather-condition",
+          "meta": "@weather-condition"
+        },
+        {
+          "text": " outside?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "18961b73-5963-475f-b9ce-b9991bbd392a",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": true
+}

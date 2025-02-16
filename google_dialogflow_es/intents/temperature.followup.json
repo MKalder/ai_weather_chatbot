@@ -1,0 +1,737 @@
+{
+  "id": "cfeb6976-460a-4d30-b43a-f6938e449f4f",
+  "name": "temperature.followup",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "weather-check"
+  ],
+  "contexts": [
+    "weather-check"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "weather.temperature",
+      "affectedContexts": [
+        {
+          "name": "weather-check",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "temperature",
+          "dataType": "@temperature",
+          "isList": true,
+          "required": true,
+          "prompts": [],
+          "value": "$temperature",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "date-time",
+          "dataType": "@sys.date-time",
+          "isList": true,
+          "required": false,
+          "prompts": [],
+          "value": "$date-time",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it be ",
+          "userDefined": false
+        },
+        {
+          "text": "chilly",
+          "userDefined": false,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " for ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b0f3384b-b287-416e-8de2-043ff602c216",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is it too ",
+          "userDefined": false
+        },
+        {
+          "text": "hot",
+          "userDefined": false,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " for outdoor activities?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d6d623d3-6385-4e24-8151-434f2e6edf1c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How strong is the ",
+          "userDefined": false
+        },
+        {
+          "text": "sun",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "47143a09-0d4a-430d-b010-ce5c025a54f2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will it be a ",
+          "userDefined": false
+        },
+        {
+          "text": "hot",
+          "userDefined": false,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " day ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4f9bf8b1-4147-4d8d-b349-ac1f3317aba6",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is it ",
+          "userDefined": false
+        },
+        {
+          "text": "cold",
+          "userDefined": false,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " outside?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3698ccd6-fc18-48b0-b4ab-f219713dca60",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "tell me if it's ",
+          "userDefined": false
+        },
+        {
+          "text": "cold",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " outside",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ba2b416c-dcfc-45c9-9c3c-43b7b1538047",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "will it be ",
+          "userDefined": false
+        },
+        {
+          "text": "warm",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "tomorrow?",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "2826abaa-9518-4f96-921e-bc496607a2c6",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'd like to know the ",
+          "userDefined": false
+        },
+        {
+          "text": "temperature",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        }
+      ],
+      "count": 0,
+      "id": "5617ded0-8c75-4088-9e9a-758fcd56a47b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "do you know if it's ",
+          "userDefined": false
+        },
+        {
+          "text": "cold",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "now",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "7c489fd1-7874-41d7-9fb8-844b65a8b5b9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "is it going to be ",
+          "userDefined": false
+        },
+        {
+          "text": "chilly",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "tomorrow",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "74b17855-a6bc-41fc-8f71-01771572635d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "temperature",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        }
+      ],
+      "count": 1,
+      "id": "54ed7a05-d118-4963-9ba2-ab1c32fdecf8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "do you know if it's ",
+          "userDefined": false
+        },
+        {
+          "text": "cold",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " outside ",
+          "userDefined": false
+        },
+        {
+          "text": "now",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "1b93cb19-4bbd-4248-8157-a34dc3458df3",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "today's",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": " temperature",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4dcfc89a-69ce-4895-ba82-00f6f12659ee",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "is it ",
+          "userDefined": false
+        },
+        {
+          "text": "hot",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "now",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "923af303-d357-4764-a30a-cac28d0eda76",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "temperature ",
+          "userDefined": false
+        },
+        {
+          "text": "tonight",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "c1c95759-e2a6-4f82-8da3-4aae327c8aed",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "show me the ",
+          "userDefined": false
+        },
+        {
+          "text": "temperature",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " for ",
+          "userDefined": false
+        },
+        {
+          "text": "this weekend",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "5c679f37-1857-4a90-83be-75672617eaaa",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "check ",
+          "userDefined": false
+        },
+        {
+          "text": "temperature",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        }
+      ],
+      "count": 0,
+      "id": "f66cb340-3a77-496f-a4ec-010821fc9644",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "how ",
+          "userDefined": false
+        },
+        {
+          "text": "cold",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " is it",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8acba688-152f-4c87-a60e-daf38cfe8429",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "how ",
+          "userDefined": false
+        },
+        {
+          "text": "cold",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " is it supposed to be ",
+          "userDefined": false
+        },
+        {
+          "text": "this week",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "547a0b66-2f11-475f-9e72-f4ebfce3b4af",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "check if it's going to be ",
+          "userDefined": false
+        },
+        {
+          "text": "freezing",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "tomorrow",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "315653aa-b118-4ef1-ad03-cd044a38fba9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "tell me if it will be ",
+          "userDefined": false
+        },
+        {
+          "text": "freezing",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " on ",
+          "userDefined": false
+        },
+        {
+          "text": "Tuesday",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "262462b4-5e9c-4b1a-b9ac-0108bd674536",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "is it ",
+          "userDefined": false
+        },
+        {
+          "text": "hot",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        }
+      ],
+      "count": 0,
+      "id": "b0e3f529-ca59-4436-8796-a4b6b0c2aabb",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "what's the ",
+          "userDefined": false
+        },
+        {
+          "text": "temperature",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " outside",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "fdc98caa-b2e6-4147-90c2-69975e29c1a6",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'd like to know the temperature on ",
+          "userDefined": false
+        },
+        {
+          "text": "June 14",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "c3e79e46-0521-4bcc-b5fd-897a4688b74c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "is ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": " a ",
+          "userDefined": false
+        },
+        {
+          "text": "hot",
+          "userDefined": false,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " day",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c20fe401-fd44-41e6-a95d-141a1c8f0e05",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "it's ",
+          "userDefined": false
+        },
+        {
+          "text": "chilly",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " outside right",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "63003e92-0c8a-4547-9260-d40bc368cf0c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "check the ",
+          "userDefined": false
+        },
+        {
+          "text": "temperature",
+          "userDefined": true,
+          "alias": "temperature",
+          "meta": "@temperature"
+        },
+        {
+          "text": " for ",
+          "userDefined": false
+        },
+        {
+          "text": "next Friday",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "6a6baf3f-ee63-4c70-924d-a36febd81071",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": true
+}
