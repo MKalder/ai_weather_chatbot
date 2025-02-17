@@ -4,7 +4,6 @@ from typing import Final
 import random
 import logging
 
-
 from weather_condition.precipitation import condition_emojis
 
 FMT: Final = "%Y-%m-%d"
