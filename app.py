@@ -43,7 +43,7 @@ def webhook():
     response_headers = {
         'Content-Type': 'application/json'
     }
-
+    
     # Return the response
     return make_response(response_json, response_headers)
 
