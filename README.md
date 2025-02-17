@@ -86,7 +86,7 @@ This project is licensed under the MIT License
 # Contact & Support
 
 For questions or support, please contact me:
-Email: aiweatherchatbot@mariuskalder.io
-LinkedIn: https://www.linkedin.com/in/marius-kalder/
+- Email: aiweatherchatbot@mariuskalder.io
+- LinkedIn: https://www.linkedin.com/in/marius-kalder/
 
 
