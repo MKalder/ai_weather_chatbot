@@ -185,33 +185,7 @@ class DialogHandler:
         """
         # Find the emoji for the first condition in the list
         return self.__find_weather_attribute("condition", condition)
-    
-    # def __emoij_temperature(self, temperature: list) -> str:
-    #     """
-    #     Finds and returns the emoji for the first temperature in the list.
-
-    #     Args:
-    #         temperature (list): A list of temperature conditions.
-
-    #     Returns:
-    #         str: The emoji representing the temperature.
-    #     """
-    #     # Return the emoji for the first temperature attribute in the list
-    #     return self.__find_weather_attribute("temperature", temperature)
-    
-    # def __emoij_wind_speed(self, wind_speed: list) -> str:
-    #     """
-    #     Finds and returns the emoji for the first wind speed in the list.
-
-    #     Args:
-    #         wind_speed (list): A list of wind speed conditions.
-
-    #     Returns:
-    #         str: The emoji representing the wind speed.
-    #     """
-    #     # Return the emoji for the first wind speed attribute in the list
-    #     return self.__find_weather_attribute("wind speed", wind_speed)
-    
+       
     def __forecast_body(self, selected_dates, daily_forecasts) -> str:
         """Formats the forecast body using the data from the API response.
 
