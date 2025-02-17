@@ -1,0 +1,262 @@
+{
+  "id": "9560cc2c-ef9c-4482-83ef-22ca456a88d0",
+  "name": "goodbye",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Catch you later! I’ll be here whenever you need a forecast!",
+            "Bye-bye! Don’t forget to check the weather before heading out!",
+            "See you soon! May your skies be clear and your day be awesome!",
+            "Goodbye! Wishing you clear skies and great weather ahead!",
+            "Take care! I’ll be here whenever you need your next forecast!",
+            "Farewell! May the wind be at your back and the sun on your face!"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I'm out!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "83ecd4bc-0b69-4691-ac60-4cf6e1b9919b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "L8r!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "80083751-6f3a-4b13-8de3-1d000ee6059d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Byeee!",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "ec7d589f-6af2-4077-9360-3f4f41a43d1f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Cya!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8faf79ed-c512-4865-9543-b0b6cb0bfc7e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "CU!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6aeecd67-7e35-4458-9a00-76c8226f3600",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Peace out!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d3484927-b8a9-40ec-9a43-9c5c9d39aff5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Take it easy.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ed63c66e-df09-4659-b2cf-a14447cc0639",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Later!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "cddfde3b-042c-417f-a509-36db23de0044",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Catch ya later!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "07f53f72-4dd2-4950-8382-e07d3f14d0d2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "See ya!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2afb8a6d-58d3-4744-9900-ac02cb435256",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Catch you later.",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "39d1b89d-fcb0-46fe-8459-5d5a3baf3a54",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Take care.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9971ea93-ef5f-42e1-9de2-1ebca029f01e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "See you later.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4674b611-ca3c-446f-be67-b4d6978a8087",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Goodbye!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "74c8a2b2-75b7-4625-a14e-722f83e33118",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "good bye",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3dae1e7a-d0cb-4b9a-b685-164e6b469f4b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "bye bye",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "17f9cd04-5a85-4f85-bd63-3767bb91fa86",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "see you",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "06740624-128c-4dad-99c3-fcbaa4e1f6db",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cu",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "56658a32-412d-4d2a-9b0f-1e5f0f3812a4",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

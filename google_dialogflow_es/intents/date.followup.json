@@ -1,0 +1,296 @@
+{
+  "id": "c98d1b9c-f7c3-4649-84cb-a1ed94b091e7",
+  "name": "date.followup",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "weather-check"
+  ],
+  "contexts": [
+    "weather-check"
+  ],
+  "endInteraction": true,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "weather-check",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "date-time",
+          "dataType": "@sys.date-time",
+          "isList": true,
+          "required": true,
+          "prompts": [],
+          "value": "$date-time",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "THANK YOU!"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "For the ",
+          "userDefined": false
+        },
+        {
+          "text": "next five days",
+          "userDefined": true,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "886c51e7-4c37-4a94-8a8d-262a2f93be16",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "how about in the ",
+          "userDefined": false
+        },
+        {
+          "text": "afternoon",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a7d63dc5-d9d8-4822-b4f1-e95c11f3a9c1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "and ",
+          "userDefined": false
+        },
+        {
+          "text": "now",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a5b21e06-235e-415e-9a57-c9869bfbd144",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "in 3 hours",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": " form ",
+          "userDefined": false
+        },
+        {
+          "text": "now",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": " on?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "066b23e7-cb53-47c3-af40-32ac7610ee7d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "and ",
+          "userDefined": false
+        },
+        {
+          "text": "tonight",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "c31385a4-63aa-4e42-aed2-c3e2d82911c1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "and on ",
+          "userDefined": false
+        },
+        {
+          "text": "the 6th of March",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6d780d17-96d4-44c7-ba26-ec8b671eb899",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "and for ",
+          "userDefined": false
+        },
+        {
+          "text": "the next days",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "57192e2a-3d36-414f-bed6-5d40ed5e984a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "for ",
+          "userDefined": false
+        },
+        {
+          "text": "the next five days",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "3914f1ff-d828-46e5-a5bf-6ad9423a8b43",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "how about ",
+          "userDefined": false
+        },
+        {
+          "text": "in three days",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "bdbca0fe-775d-429a-93c9-fe95458032c7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "and on ",
+          "userDefined": false
+        },
+        {
+          "text": "Monday",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "d6fef3f9-0ae9-4769-a9db-050e8099cce9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "and for ",
+          "userDefined": false
+        },
+        {
+          "text": "tomorrow",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        }
+      ],
+      "count": 0,
+      "id": "787f6e27-a6a4-4fed-acad-ac2a7cfbc60d",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": true
+}

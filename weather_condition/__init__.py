@@ -1,14 +1,15 @@
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 __date__ = "2025-02-15"
 __author__ = "Marius Kalder"
 __email__ = "aiweatherchatbot@mariuskalder.io"
-__status__ = "Production"
+__status__ = "Developement"
 
 import logging
 
 from .weather import Weather
 from .dialog import DialogHandler
-from .precipitation import condition_emojis, temperature_emojis, wind_speed_emojis
+from .date_handler import DateHandler
+from .precipitation import condition_emojis
 
 logging.basicConfig(
     filename='weather_query.log',  # Name of the log file

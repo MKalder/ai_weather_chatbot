@@ -1,0 +1,26 @@
+{
+  "isRegexp": false,
+  "isEnum": false,
+  "allowFuzzyExtraction": false,
+  "name": "wind-speed",
+  "automatedExpansion": false,
+  "entries": [
+    {
+      "value": "wind speed",
+      "synonyms": [
+        "wind speed",
+        "wind bows",
+        "windy",
+        "wind",
+        "strong winds",
+        "high wind",
+        "windspeeds",
+        "air movement speed",
+        "breeze",
+        "gust speed"
+      ]
+    }
+  ],
+  "id": "74bb441e-52e2-440e-9dcc-6a27be2116f1",
+  "isOverridable": false
+}

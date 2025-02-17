@@ -1,0 +1,73 @@
+{
+  "id": "93dcd13f-34bf-4de5-bcaf-deea03f5cdfc",
+  "name": "fallback",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": true,
+  "events": [],
+  "fallbackIntent": true,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Sorry, I didn’t understand that, but I can help with weather-related questions like: ‘What’s the weather in Bangkok?' ⛅",
+            "Oops! I’m not sure what you mean, but you can ask me things like: ‘Tell me today’s weather in Singapore.'🌦",
+            "Hmm… I didn’t quite get that! Try asking about the weather, like: ‘How’s the weather in Manila today?' ☀️",
+            "I’m here for weather updates! Try asking: ‘What’s the temperature in Kuala Lumpur?' 🌡",
+            "I didn’t catch that! But I can tell you the forecast. Just ask: ‘Will it rain in Hanoi tomorrow?' 🌧",
+            "Not sure I understood, but you can ask me about the weather! Try: ‘What’s the wind speed in Bali for today?’ ☀️",
+            "Sorry, I can only help with weather updates. Try something like: ‘How windy is it in Jakarta?’ 🌬",
+            "Sorry, I can only help with weather updates. Try asking something like: ‘What’s the temperature in Bangkok?’ ☀️",
+            "I’m all about the weather! Try something like: ‘Will it rain in Kuala Lumpur today?’ 🌧️",
+            "Weather is my thing! Try something like: ‘Is it windy in Ho Chi Minh City?’ 🌬️"
+          ]
+        },
+        {
+          "type": "custom_payload",
+          "condition": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "options": [
+                    {
+                      "text": "🌤 Today's Weather"
+                    },
+                    {
+                      "text": "📅 Next five days report"
+                    },
+                    {
+                      "text": "☀️ Today's Temperature"
+                    }
+                  ],
+                  "type": "chips"
+                }
+              ]
+            ]
+          }
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

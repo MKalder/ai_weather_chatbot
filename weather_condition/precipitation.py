@@ -29,19 +29,3 @@ condition_emojis = {
         "strong_wind": "🌪️",
         "stormy": "🌬️🌪️"
     }
-    
-temperature_emojis = {
-    "chilly": "🥶",
-    "cold": "❄️",
-    "hot": "🔥",
-    "warm": "🌤️",
-    "temperature": "🌡️"
-    }
-    
-wind_speed_emojis = {
-    "calm": "🌬️",
-    "breeze": "🌫️",
-    "windy": "💨",
-    "strong_wind": "🌪️",
-    "stormy": "🌬️🌪️"
-}   

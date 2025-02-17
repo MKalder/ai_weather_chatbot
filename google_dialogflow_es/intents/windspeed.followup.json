@@ -1,0 +1,465 @@
+{
+  "id": "d982d459-0611-45e1-b82b-00fdd6aaa8c8",
+  "name": "windspeed.followup",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "weather-check"
+  ],
+  "contexts": [
+    "weather-check"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "weather-check",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "wind-speed",
+          "dataType": "@wind-speed",
+          "isList": true,
+          "required": false,
+          "prompts": [],
+          "value": "$wind-speed",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "date-time",
+          "dataType": "@sys.date-time",
+          "isList": true,
+          "required": false,
+          "prompts": [],
+          "value": "$date-time",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What's the current ",
+          "userDefined": false
+        },
+        {
+          "text": "gust speed",
+          "userDefined": true,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d2a6f28a-8994-4c46-afad-f409a45bf884",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How fast are the ",
+          "userDefined": false
+        },
+        {
+          "text": "winds",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " moving?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3330464f-6463-4a10-9511-703f59928232",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What's the ",
+          "userDefined": false
+        },
+        {
+          "text": "air movement speed",
+          "userDefined": true,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " at the ",
+          "userDefined": false
+        },
+        {
+          "text": "moment",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9388c87c-3fdc-46ad-99d4-6c9475b793ff",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What's the current ",
+          "userDefined": false
+        },
+        {
+          "text": "breeze",
+          "userDefined": true,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " speed?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "7171617d-fccc-416d-873e-2670e86e753f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How fast is the ",
+          "userDefined": false
+        },
+        {
+          "text": "wind",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " blowing?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "0cd81af6-6038-4904-b5dc-6c9c4f8afeb8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Can you tell me the ",
+          "userDefined": false
+        },
+        {
+          "text": "wind",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " force?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "21f5b678-7453-4f7b-b4d4-1bdf28c2ed48",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What's the current ",
+          "userDefined": false
+        },
+        {
+          "text": "wind",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " velocity?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9c5286b7-f0b2-4bcd-b6ae-dfbe82d7db7f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How strong is the ",
+          "userDefined": false
+        },
+        {
+          "text": "wind",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "right now",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "1cab04fa-c71d-4ef7-b123-0f1fe8ab1c02",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What is the ",
+          "userDefined": false
+        },
+        {
+          "text": "windspeed",
+          "userDefined": true,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4a2c78fa-3ef0-4ad4-8521-ff8d1eb2dca8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How about the ",
+          "userDefined": false
+        },
+        {
+          "text": "winds",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " for ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "1e294d3b-abec-4d63-a47a-b821d881574b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is there a ",
+          "userDefined": false
+        },
+        {
+          "text": "high",
+          "userDefined": true,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "wind",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " warning?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "e8bedfc3-61c4-4e52-a451-93685623f538",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Is the ",
+          "userDefined": false
+        },
+        {
+          "text": "wind speed",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " safe for outdoor activities?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a4852559-ffbc-4b3c-a2db-eeaaf98cf041",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Will the ",
+          "userDefined": false
+        },
+        {
+          "text": "wind",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " get stronger later?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "996f2de5-6560-4967-8109-c2859f383158",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What's the ",
+          "userDefined": false
+        },
+        {
+          "text": "wind speed",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "right now",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2550111c-686c-4382-bd71-f3a6849f9515",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How strong is the ",
+          "userDefined": false
+        },
+        {
+          "text": "wind",
+          "userDefined": false,
+          "alias": "wind-speed",
+          "meta": "@wind-speed"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date-time",
+          "meta": "@sys.date-time"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a7f75c7f-89f1-4bc5-a32a-f47d0a852f6e",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": true
+}

@@ -1,0 +1,358 @@
+{
+  "id": "b4f0dd32-149c-4ae6-962f-b4ead34c16a1",
+  "name": "welcome",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": true,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "person",
+          "dataType": "@sys.person",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$person",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "telegram": true
+      },
+      "messages": [
+        {
+          "type": "custom_payload",
+          "platform": "telegram",
+          "condition": "",
+          "payload": {
+            "telegram": {
+              "reply_markup": {
+                "keyboard": [
+                  [
+                    "🌤 Actual Weather",
+                    "📅 Weather Forecast",
+                    "☀️ UV Index"
+                  ]
+                ],
+                "resize_keyboard": true,
+                "one_time_keyboard": true
+              }
+            }
+          }
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Hey there! ☀️ Ready to check the weather? Just tap below to get started! 🌍",
+            "Welcome! 🌦 Need a quick weather update? Choose an option below! 👇",
+            "Hello! 🌞 Wondering about the weather? Just tap below to find out! ⛅",
+            "Hey there! 🌎 Let’s check the weather for you. Pick an option below! 🌦️",
+            "Welcome! ☀️ Rain or shine, I’ve got the forecast for you. Choose below! 👇",
+            "Hi! 🌤 Need a weather update? Tap an option and let’s go! 🚀",
+            "Good to see you! 🌍 What’s the weather like today? Let’s find out! ⛅",
+            "Hey there! 😊 Curious about the weather? Let’s check it out! ☀️",
+            "Welcome! 🌍 Let’s find out what the skies have in store today! ⛅",
+            "Good to have you here! ☀️ Need a forecast? Just ask! 🌧️",
+            "Hello! 🌍 What’s the weather like today? Let’s find out together! 😊",
+            "Nice to see you! 🌞 Ready to check the forecast? Ask away! 🌤️",
+            "Hey there! 🌎 Wondering about today’s weather? Let me help! ☁️",
+            "Welcome! 😊 Let’s explore the forecast—what location do you have in mind? 🌦️",
+            "Glad to see you! ☀️ Need a weather update? I’ve got you covered! 🌍",
+            "Hello! 😊 Ready for today’s weather update? Just ask! 🌦️"
+          ]
+        },
+        {
+          "type": "custom_payload",
+          "condition": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "🌤 Today's Weather"
+                    },
+                    {
+                      "text": "📅 Next five days report"
+                    },
+                    {
+                      "text": "☀️ Today's Temperature"
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "hi dude",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "362a8671-27a0-4e19-abcd-ca3c78cbcb17",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Whats up?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d99244cd-08f5-40b7-a2e5-df929f3bb11d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "yo ",
+          "userDefined": false
+        },
+        {
+          "text": "Bro",
+          "userDefined": false,
+          "alias": "person",
+          "meta": "@sys.person"
+        },
+        {
+          "text": "!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ccb81398-31ff-4c5f-b828-930a98444c16",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "just going to say hi",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "7a244966-c93b-48e3-bba6-29c62f81ce60",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "heya",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a7c09fa9-ddfa-4912-ba69-b101b37d0c13",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "hello hi",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f5c721d3-6ef0-4ad2-9343-7f804324cb97",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "howdy",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c9f7df0f-4b30-4cad-81f9-7beba2ea9e5e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "hey there",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f68e3f8d-aac1-4ab4-8cbb-a1558deaac6b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "hi there",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "26fb84a9-b555-4c10-81ee-7a806fd7bd65",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "greetings",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "e97176f0-1f50-4cb8-bb92-9d748aad3611",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "hey",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "1d6dc188-a77d-4a38-9183-e54ca84cd325",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "long time no see",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ed77f257-060b-4bf1-8e36-e96dfa33cef8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "hello",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8eeac5b6-2fa3-469a-ac51-65f668d21504",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "lovely day isn't it",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a736be0a-c1b0-4cc3-82da-c30074ab55aa",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I greet you",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9f610c73-2033-417a-87a2-58466a96438e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "hello again",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "63839e82-b37c-407d-9ebf-6802acc2ca35",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "hi",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a450827d-fe66-4d70-910e-f9ba0c323a7c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "hello there",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f0cb7b72-3df1-4a6a-80d7-dfb07df696a5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "a good day",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "71cd437a-a5ca-45cd-94ca-75a90f3a6194",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

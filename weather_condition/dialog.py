@@ -1,19 +1,12 @@
 from collections import defaultdict, Counter
 from datetime import datetime
+from typing import Final
 import random
 import logging
 
-from weather_condition.precipitation import condition_emojis, temperature_emojis, wind_speed_emojis
+from weather_condition.precipitation import condition_emojis
 
-FMT = "%Y-%m-%d"
-
-# Configure the logger
-# logging.basicConfig(
-#     filename='weather_query.log',  # Name of the log file
-#     level=logging.DEBUG,  # Set the logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-#     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',  # Log message format
-#     datefmt='%Y-%m-%d %H:%M:%S'  # Date format
-# )
+FMT: Final = "%Y-%m-%d"
 
 class DialogHandler:
     def __init__(self):
@@ -166,7 +159,6 @@ class DialogHandler:
         Returns:
             str or None: The emoji representing the attribute or None if not found.
         """
-        print(f"🔎 Finding {attribute_name}..")
         logging.info(f"🔎 Finding {attribute_name}..")
         
         # Check if the attribute list is not empty
@@ -193,33 +185,7 @@ class DialogHandler:
         """
         # Find the emoji for the first condition in the list
         return self.__find_weather_attribute("condition", condition)
-    
-    def __emoij_temperature(self, temperature: list) -> str:
-        """
-        Finds and returns the emoji for the first temperature in the list.
-
-        Args:
-            temperature (list): A list of temperature conditions.
-
-        Returns:
-            str: The emoji representing the temperature.
-        """
-        # Return the emoji for the first temperature attribute in the list
-        return self.__find_weather_attribute("temperature", temperature)
-    
-    def __emoij_wind_speed(self, wind_speed: list) -> str:
-        """
-        Finds and returns the emoji for the first wind speed in the list.
-
-        Args:
-            wind_speed (list): A list of wind speed conditions.
-
-        Returns:
-            str: The emoji representing the wind speed.
-        """
-        # Return the emoji for the first wind speed attribute in the list
-        return self.__find_weather_attribute("wind speed", wind_speed)
-    
+       
     def __forecast_body(self, selected_dates, daily_forecasts) -> str:
         """Formats the forecast body using the data from the API response.
 
@@ -230,8 +196,7 @@ class DialogHandler:
         Returns:
             str: The formatted forecast body.
         """
-        print("📅⚙️ Formatting forecast body")
-        
+        logging.info("📅⚙️ Formatting forecast body complete")
         forecast = ""
         
         # Iterate over the selected dates
@@ -276,7 +241,7 @@ class DialogHandler:
         Returns:
             str: The formatted forecast body with the weather condition.
         """
-        print(f"📅⚙️ Formatting forecast body {condition}")
+        logging.info(f"📅⚙️ Formatting forecast body {condition}")
         forecast = ""
         
         common_weather = []
@@ -287,7 +252,6 @@ class DialogHandler:
                 print(entry['weather'][0]['description'].lower())
                 for i in condition:
                     if i in entry['weather'][0]['description'].lower():
-                        print(f"📅⚙️ Formatting forecast body condition {i} in {entry['weather'][0]['description'].lower()}")
                         common_weather.append(entry['weather'][0]['description'].title())
                     else:
                         common_weather.append(f"No {i}")
@@ -320,7 +284,7 @@ class DialogHandler:
         Returns:
             str: The formatted forecast body with the temperature information.
         """
-        print("📅⚙️ Formatting forecast body...")
+        print(f"📅⚙️ Formatting forecast body {temperature}")
         forecast = ""
         
         # Iterate over the selected dates
@@ -357,7 +321,7 @@ class DialogHandler:
         Returns:
             str: The formatted forecast body with the wind speed information.
         """
-        print("📅⚙️ Formatting forecast body...")
+        print(f"📅⚙️ Formatting forecast body {wind_speed}")
         forecast = ""
         
         # Iterate over the selected dates

@@ -1,0 +1,185 @@
+{
+  "isRegexp": false,
+  "isEnum": false,
+  "allowFuzzyExtraction": false,
+  "name": "weather-condition",
+  "automatedExpansion": false,
+  "entries": [
+    {
+      "value": "clouds",
+      "synonyms": [
+        "clouds",
+        "cloudy",
+        "cloud"
+      ]
+    },
+    {
+      "value": "drizzle",
+      "synonyms": [
+        "drizzle"
+      ]
+    },
+    {
+      "value": "fog",
+      "synonyms": [
+        "fog",
+        "mist",
+        "foggy"
+      ]
+    },
+    {
+      "value": "freezing rain",
+      "synonyms": [
+        "freezing rain"
+      ]
+    },
+    {
+      "value": "haze",
+      "synonyms": [
+        "haze",
+        "hazy"
+      ]
+    },
+    {
+      "value": "hurricanes",
+      "synonyms": [
+        "hurricanes"
+      ]
+    },
+    {
+      "value": "ice",
+      "synonyms": [
+        "ice",
+        "blizzard",
+        "ice storm",
+        "freezing",
+        "freezy"
+      ]
+    },
+    {
+      "value": "overcast",
+      "synonyms": [
+        "overcast"
+      ]
+    },
+    {
+      "value": "rain",
+      "synonyms": [
+        "rain",
+        "raining",
+        "rainy",
+        "pour down",
+        "heavy rain",
+        "heavy showers"
+      ]
+    },
+    {
+      "value": "rain snow",
+      "synonyms": [
+        "rain snow"
+      ]
+    },
+    {
+      "value": "shower",
+      "synonyms": [
+        "shower",
+        "showers"
+      ]
+    },
+    {
+      "value": "smoke",
+      "synonyms": [
+        "smoke"
+      ]
+    },
+    {
+      "value": "snow",
+      "synonyms": [
+        "snow",
+        "snowing",
+        "snowy"
+      ]
+    },
+    {
+      "value": "storm",
+      "synonyms": [
+        "storm",
+        "stormy"
+      ]
+    },
+    {
+      "value": "sun",
+      "synonyms": [
+        "sun",
+        "sunny"
+      ]
+    },
+    {
+      "value": "thunderstorm",
+      "synonyms": [
+        "thunderstorm",
+        "thunder"
+      ]
+    },
+    {
+      "value": "tornadoes",
+      "synonyms": [
+        "tornadoes",
+        "tornado"
+      ]
+    },
+    {
+      "value": "volcano eruption",
+      "synonyms": [
+        "volcano eruption"
+      ]
+    },
+    {
+      "value": "clear",
+      "synonyms": [
+        "clear"
+      ]
+    },
+    {
+      "value": "mist",
+      "synonyms": [
+        "mist",
+        "misty"
+      ]
+    },
+    {
+      "value": "dust",
+      "synonyms": [
+        "dust",
+        "dusty"
+      ]
+    },
+    {
+      "value": "sand",
+      "synonyms": [
+        "sand",
+        "sandy"
+      ]
+    },
+    {
+      "value": "ash",
+      "synonyms": [
+        "ash"
+      ]
+    },
+    {
+      "value": "squall",
+      "synonyms": [
+        "squall"
+      ]
+    },
+    {
+      "value": "sandstorm",
+      "synonyms": [
+        "sandstorm"
+      ]
+    }
+  ],
+  "id": "26495797-7572-47e6-a93c-5c898d127fd1",
+  "isOverridable": false
+}

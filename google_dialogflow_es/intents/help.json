@@ -1,0 +1,149 @@
+{
+  "id": "3f7494c5-16f5-4e92-a90a-a54550b7e8a0",
+  "name": "help",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": true,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Sure, I can help you with weather reports",
+            "I’m here to help! Do you need a weather update or something specific about temperature, wind, or conditions?",
+            "Of course! Let me know what you need—today’s forecast, a five-day outlook, or something else?",
+            "Help is on the way! Just tell me what weather info you’re looking for!",
+            "I can provide details on rain, sunshine, cloud cover, or storms. What specific weather condition do you need info on?",
+            "Need to know about fog, humidity, thunderstorms, or clear skies? Just ask!",
+            "Whether it’s heavy rain, strong winds, or perfect beach weather, let me know what you’re looking for!",
+            "Want to know the weather for a specific time of day, like morning, afternoon, or evening?",
+            "Whether it’s today, tomorrow, or five days ahead, I’ve got your forecast covered. Just tell me the date!",
+            "I can give you today’s weather, a five-day forecast, or even hourly updates. What time frame do you need?",
+            "I’m here to help with all your weather questions! Want to check if it’ll rain, how windy it’ll be, or what the temperature is?",
+            "Need a weather update? Just ask for today’s forecast, the next few days, or specific details like wind and temperature!”",
+            "Of course! I can provide today’s weather, a five-day forecast, or details like temperature, wind speed, and conditions. What do you need?"
+          ]
+        },
+        {
+          "type": "custom_payload",
+          "condition": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "🌤 Today's Weather"
+                    },
+                    {
+                      "text": "📅 Next five days report"
+                    },
+                    {
+                      "text": "☀️ Today's Temperature"
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Help with specific weather condtions?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d5e128ad-b453-4420-8d3a-096fc449f131",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Please help me!",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "75d055f0-9976-415b-8593-fa420db75d0f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "can you help me?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "000de72e-7a69-4ffa-a6f3-b2c4d44eca3a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "help me",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "808ba242-9eb9-4e84-a7b0-85a84275586e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "help me please",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "1433b0e4-f08c-4b1c-9dde-9ac77364631a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I need help",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c21000c8-5ac6-445c-8f36-28ea467e22b9",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
