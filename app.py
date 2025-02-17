@@ -7,7 +7,6 @@ from weather_condition.weather import Weather
 app = Flask(__name__)
 CORS(app)
 
-#weather_data = WeatherData()
 weather = Weather()
 
 @app.route('/')
@@ -23,15 +22,15 @@ def webhook():
     """
     Endpoint to handle Dialogflow fulfillment requests
 
-    This endpoint receives a POST request from Dialogflow with a JSON payload
+    This endpoint receives a POST request from Google Dialogflow ES with a JSON payload
     containing the request data. The function processes the request and returns
-    a JSON response according to the Dialogflow fulfillment response format.
+    a JSON response according to the Google Dialogflow ES fulfillment response format.
 
     Returns:
         A JSON response containing the response from the fulfillment code.
     """
 
-    # Get the request data from the Dialogflow request
+    # Get the request data from Google Dialogflow ES request
     request_json = request.get_json(silent=True, force=True)
 
     # Process the request using the Weather class
@@ -49,5 +48,20 @@ def webhook():
     return make_response(response_json, response_headers)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5050, debug=True)
+    """
+    This is the entry point of the application. It starts the Flask
+    development server on port 5050 and enables debug mode.
+
+    This is only executed when the script is run directly, not when it is
+    imported as a module, such as when hosted on PythonAnywhere. 
+    """
+    # Start the Flask development server
+    app.run(
+        # The host IP address to bind to
+        host="0.0.0.0",
+        # The port number to listen on
+        port=5050,
+        # Enable debug mode
+        debug=True
+    )
 
