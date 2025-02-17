@@ -68,6 +68,7 @@ git clone https://github.com/MKalder/ai_weather_chatbot.git
 3. Install dependencies:
 
 ```bash
+cd ai_weather_chatbot
 pip install -r requirements.txt
 ```
 
