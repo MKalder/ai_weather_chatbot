@@ -1,4 +1,5 @@
 .env
+chatbot/
 .chatbot/
 __pycache__/
 *.py[cod]
