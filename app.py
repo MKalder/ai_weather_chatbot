@@ -1,8 +1,9 @@
-from flask import Flask, request, make_response 
-from flask_cors import CORS,cross_origin 
+from flask import Flask, request, make_response, render_template_string #type: ignore
+from flask_cors import CORS,cross_origin #type: ignore
 import json
 
 from weather_condition.weather import Weather
+from html.web_application import html_content
 
 app = Flask(__name__)
 CORS(app)
@@ -13,7 +14,7 @@ weather = Weather()
 def index():
     """Endpoint to indicate that the webhook server is running"""
 
-    return 'Webhook is running!'
+    return render_template_string(html_content)
 
 # geting and sending response to dialogflow
 @app.route('/webhook', methods=['POST'])

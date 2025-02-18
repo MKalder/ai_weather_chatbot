@@ -1,7 +1,7 @@
-from dotenv import load_dotenv
+from dotenv import load_dotenv #type: ignore
 from typing import Dict
 import logging
-import requests 
+import requests #type: ignore
 import os 
 
 from .dialog import DialogHandler
@@ -89,16 +89,18 @@ class Weather:
         """Gets the date from the user's input."""
         logging.info("🕐 Getting date...")
         time = self.parameters.get("date-time")
+        print(time)
         try:
             # If the city is not in the current context, try to get it from the output context
             if not time:
                 time = self.result.get("outputContexts", [])[0].get("parameters", {}).get("date-time", [])
             logging.info(f"🕐 date: {time[0]}")
             # Return the first city if multiple are provided
-            return time[0]
+            return time
         except Exception as e:
             logging.error(f"Failed to find 🕐 date: {e}")
             return None
+       
         
     def process_request(self, request: Dict) -> Dict:
         """Processes incoming weather queries.
