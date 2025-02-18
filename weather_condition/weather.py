@@ -1,7 +1,7 @@
-from dotenv import load_dotenv
+from dotenv import load_dotenv #type: ignore
 from typing import Dict
 import logging
-import requests 
+import requests #type: ignore
 import os 
 
 from .dialog import DialogHandler
