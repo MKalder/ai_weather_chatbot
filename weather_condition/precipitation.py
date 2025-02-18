@@ -27,5 +27,8 @@ condition_emojis = {
         "breeze": "🌫️",
         "windy": "💨",
         "strong_wind": "🌪️",
-        "stormy": "🌬️🌪️"
+        "stormy": "🌬️🌪️",
+        "sandstorm": "🌪️",
+        "volcanic ash": "🌋",
+        "vulcano": "🌋"
     }
