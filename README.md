@@ -1,6 +1,6 @@
 # AI Weather Chatbot
 
-<img src="images/weather_chatbot.png" alt="Chatbot" width="20%">
+<img src="images/chatbot_images/bot_icon/weather_chatbot.png" alt="Chatbot" width="20%">
 
 ## Description
 The Weather Chatbot is designed to provide real-time and interactive weather updates through natural language queries, offering a more intuitive and user-friendly alternative to conventional weather applications.
@@ -11,9 +11,13 @@ The chatbot is available for testing here: https://mariuskalder.io/ai-weather-ch
 
 From a technical perspective, this project provides a solid foundation for further exploration into the core principles of Natural Language Processing (NLP). While Google Dialogflow ES handles essential NLP tasks such as tokenization, normalization, stemming, and named entity recognition autonomously, developers retain significant control over model training. This includes curating training data (intents), defining context to steer user interactions effectively, and optimizing entity recognition to ensure precise and contextually relevant responses. 
 
+## Test Questions
+
+<a href="test/test_questions.pdf" target="_blank">Download PDF</a>
+
 ## Architecture
 
-<img src="images/architecture.png" alt="Architecture" width="80%">
+<img src="images/architecture/architecture.png" alt="Architecture" width="80%">
 
 The chatbot follows a modular architecture with three key components:
 1. Natural Language Processing (NLP): Handled by Google Dialogflow ES (GDF) for intent recognition and seamless integration.
@@ -78,7 +82,13 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Once the application is running, use Ngrok to generate a public URL and configure it in Dialogflow as your webhook endpoint.
+5. Run ngrok
+
+```bash
+ngrok http 5050
+```
+
+6. Use the generated ngrok public URL and configure it in Dialogflow as your webhook endpoint
 
 # License
 
@@ -88,6 +98,8 @@ This project is licensed under the MIT License
 
 For questions or support, please contact me:
 - Email: aiweatherchatbot@mariuskalder.io
+- Website: https://mariuskalder.io/ 
 - LinkedIn: https://www.linkedin.com/in/marius-kalder/
+- Medium: https://medium.com/@marius.kalder/about 
 
 
