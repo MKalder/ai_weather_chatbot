@@ -50,11 +50,11 @@ def webhook():
 
 if __name__ == "__main__":
     """
-    This is the entry point of the application. It starts the Flask
-    development server on port 5050 and enables debug mode.
-
-    This is only executed when the script is run directly, not when it is
-    imported as a module, such as when hosted on PythonAnywhere. 
+    This is the application’s entry point. 
+    It starts the Flask development server on port 5050 with debug mode enabled. 
+    
+    This setup is used with ngrok for local hosting and is only executed when the script runs directly, 
+    not when imported as a module for cloud hosting. 
     """
     # Start the Flask development server
     app.run(

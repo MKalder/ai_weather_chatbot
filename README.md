@@ -1,6 +1,6 @@
 # AI Weather Chatbot
 
-<img src="images/bot_icon/weather_chatbot.png" alt="Chatbot" width="20%">
+<img src="images/chatbot_images/bot_icon/weather_chatbot.png" alt="Chatbot" width="20%">
 
 ## Description
 The Weather Chatbot is designed to provide real-time and interactive weather updates through natural language queries, offering a more intuitive and user-friendly alternative to conventional weather applications.
@@ -82,7 +82,13 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Once the application is running, use Ngrok to generate a public URL and configure it in Dialogflow as your webhook endpoint.
+5. Run ngrok
+
+```bash
+ngrok http 5050
+```
+
+6. Use the generated ngrok public URL and configure it in Dialogflow as your webhook endpoint
 
 # License
 
@@ -92,6 +98,7 @@ This project is licensed under the MIT License
 
 For questions or support, please contact me:
 - Email: aiweatherchatbot@mariuskalder.io
+- Website: www.MariusKalder.io
 - LinkedIn: https://www.linkedin.com/in/marius-kalder/
 
 
