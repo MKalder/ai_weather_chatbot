@@ -3,7 +3,7 @@ html_content = '''<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Chatbot - Testing Page 🤖</title>
+    <title>Weather Chatbot - Testing Page</title>
     <!-- Dialogflow Messenger -->
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
         <df-messenger
@@ -119,9 +119,7 @@ html_content = '''<!DOCTYPE html>
 <body>
     <div class="container">
         <h1>Weather Chatbot Testing Page</h1>
-        
-        <p>This chatbot provides real-time weather updates and answers queries. Below are some example questions and expected responses.</p>
-
+        <p>This chatbot provides weather data updates and answers waether related queries. Below are some example questions and expected responses.</p>
         <h2>Test Questions</h2>
         <table>
             <tr>
@@ -164,8 +162,14 @@ html_content = '''<!DOCTYPE html>
             </tr>
             <tr>
                 <td>What’s the UV index today?</td>
-                <td><b>Exmaple answer:</b><br>
+                <td><b>Example answer:</b><br>
                 Sorry, I can only help with weather updates. Try asking something like: ‘What’s the temperature in Bangkok?’ ☀️
+                </td>
+            </tr>
+            <tr>
+                <td>How was the weather last week in New York?</td>
+                <td><b>Example answer:</b><br>
+                Past weather is history! Let’s talk about what’s ahead. Ask me about future forecasts.🌍⏳
                 </td>
             </tr>
         </table>
@@ -174,13 +178,15 @@ html_content = '''<!DOCTYPE html>
             <h2>Webhook Status</h2>
             <p><strong>Status:</strong> ✅ Online</p>
             <p>Powered by: <strong>Marius Kalder</strong></p>
+            <p>GitHub: <a href="https://github.com/MKalder/ai_weather_chatbot" target="_blank">GitHub Repository</a></p>
             <p>Email: <a href="mailto:aiweatherchatbot@mariuskalder.io">aiweatherchatbot@mariuskalder.io</a></p>
-            <p>Contact: <a href="https://mariuskalder.io" target="_blank">mariuskalder.io</a></p>
+            <p>Website: <a href="https://mariuskalder.io" target="_blank">www.mariuskalder.io</a></p>
+            <p>LikedIn: <a href="https://www.linkedin.com/in/marius-kalder/" target="_blank">Marius Kalder</a></p>
         </div>
     </div>
-
     <div class="footer">
         © 2025 Weather Chatbot by Marius Kalder
     </div>
+    <div style="margin-bottom: 50px;"></div>
 </body>
 </html>'''

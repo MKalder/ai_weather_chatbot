@@ -11,6 +11,10 @@ The chatbot is available for testing here: https://mariuskalder.io/ai-weather-ch
 
 From a technical perspective, this project provides a solid foundation for further exploration into the core principles of Natural Language Processing (NLP). While Google Dialogflow ES handles essential NLP tasks such as tokenization, normalization, stemming, and named entity recognition autonomously, developers retain significant control over model training. This includes curating training data (intents), defining context to steer user interactions effectively, and optimizing entity recognition to ensure precise and contextually relevant responses. 
 
+## Test Questions
+
+<a href="test/test_questions.pdf" target="_blank">Download PDF</a>
+
 ## Architecture
 
 <img src="images/architecture/architecture.png" alt="Architecture" width="80%">
