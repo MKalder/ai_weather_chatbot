@@ -1,6 +1,6 @@
 # AI Weather Chatbot
 
-<img src="images/weather_chatbot.png" alt="Chatbot" width="20%">
+<img src="images/bot_icon/weather_chatbot.png" alt="Chatbot" width="20%">
 
 ## Description
 The Weather Chatbot is designed to provide real-time and interactive weather updates through natural language queries, offering a more intuitive and user-friendly alternative to conventional weather applications.
@@ -13,7 +13,7 @@ From a technical perspective, this project provides a solid foundation for furth
 
 ## Architecture
 
-<img src="images/architecture.png" alt="Architecture" width="80%">
+<img src="images/architecture/architecture.png" alt="Architecture" width="80%">
 
 The chatbot follows a modular architecture with three key components:
 1. Natural Language Processing (NLP): Handled by Google Dialogflow ES (GDF) for intent recognition and seamless integration.

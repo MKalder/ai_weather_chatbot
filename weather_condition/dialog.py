@@ -221,7 +221,6 @@ class DialogHandler:
             # Assemble the forecast
             forecast += f"""
                 📅 {formatted_date}
-                ━━━━━━━━━━
                 ⛅ Weather:  {most_common_weather}
                 🌡️ Temperature: {temp_info}
                 💨 Wind Speed: {most_common_wind_speed} m/s
@@ -266,7 +265,6 @@ class DialogHandler:
                 
             forecast += f"""
                     📅 {formatted_date}
-                    ━━━━━━━━━━
                     {common_w}
                     """ 
                                    
@@ -304,7 +302,6 @@ class DialogHandler:
             # Assemble the forecast
             forecast += f"""
                     📅 {formatted_date}
-                    ━━━━━━━━━━
                     🌡️🔽 Temperature: {temp_info}
                     """                
         return forecast
