@@ -42,7 +42,8 @@ class Weather:
         params = {
             "q": self.city,  # City name for which to fetch weather data
             "appid": self.owm_api_key,  # OpenWeatherMap API key
-            "units": "metric"  # Use metric units for temperature
+            "units": "metric",  # Use metric units for temperature
+            "lang": "en",  # Use English language
         }
 
         # Perform GET request to fetch data
