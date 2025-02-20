@@ -55,8 +55,6 @@ The folder google_dialogflow_es contains the following subfolders:
 
 Inside these folders, you will find JSON files that need to be uploaded to Dialogflow. The intents and entities serve as training data to help the bot understand different types of questions and identify relevant entities.
 
-The complete setup guide can be downloaded from my blog post: [Insert Link]
-
 ## Set Up Webhook
 
 There are several ways to connect a Flask web application locally with Google Dialogflow (GDF). I personally prefer Ngrok because it’s easy to set up and use. You can find the Ngrok setup guide here: LINK
