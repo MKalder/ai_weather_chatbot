@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
-from dateutil import parser 
+from dateutil import parser #type: ignore 
 from typing import Dict
 import logging
 
-from .dialog import DialogHandler
+from .dialog_handler import DialogHandler
 
 class DateHandler():
     def __init__(self):

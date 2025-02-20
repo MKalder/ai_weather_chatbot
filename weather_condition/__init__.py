@@ -7,7 +7,7 @@ __status__ = "Production"
 import logging
 
 from .weather import Weather
-from .dialog import DialogHandler
+from .dialog_handler import DialogHandler
 from .date_handler import DateHandler
 from .precipitation import condition_emojis
 

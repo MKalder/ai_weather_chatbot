@@ -7,7 +7,7 @@ The Weather Chatbot is designed to provide real-time and interactive weather upd
 
 The primary motivation behind developing this chatbot stemmed from a deep curiosity about conversational AI and its potential to address a wide range of practical challenges. Additionally, this project served as an exploration into the seamless integration of a dedicated chatbot using freely available software. The objective was to assess how effectively such a system could be tailored for natural and intuitive user interactions.
 
-The chatbot is available for testing here: https://mariuskalder.io/ai-weather-chatbot/ 
+The chatbot is available for testing here: https://pythonaibot.pythonanywhere.com/
 
 From a technical perspective, this project provides a solid foundation for further exploration into the core principles of Natural Language Processing (NLP). While Google Dialogflow ES handles essential NLP tasks such as tokenization, normalization, stemming, and named entity recognition autonomously, developers retain significant control over model training. This includes curating training data (intents), defining context to steer user interactions effectively, and optimizing entity recognition to ensure precise and contextually relevant responses. 
 

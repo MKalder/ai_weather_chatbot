@@ -153,8 +153,8 @@ html_content = '''<!DOCTYPE html>
                 </td>
             </tr>
             <tr>
-                <td>Will it be warm in Frankfurt?</td>
-                <td>📍Frankfurt am Main:<br>
+                <td>Will it be warm in Munich?</td>
+                <td>📍Munich:<br>
                 📅 {day name}, {month} {day}, {year}<br>
                 🌡️🔽 Temperature: {min temp}<br>
                 🌡️🔼 Temperature: {max temp}
