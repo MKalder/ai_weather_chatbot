@@ -1,5 +1,5 @@
-__version__ = "1.0.6"
-__date__ = "2025-02-15"
+__version__ = "1.0.7"
+__date__ = "2025-02-20"
 __author__ = "Marius Kalder"
 __email__ = "aiweatherchatbot@mariuskalder.io"
 __status__ = "Production"
