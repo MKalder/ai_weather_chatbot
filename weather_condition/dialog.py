@@ -338,7 +338,6 @@ class DialogHandler:
             # Assemble the forecast
             forecast += f"""
                     📅 {formatted_date}
-                    ━━━━━━━━━━
                     Wind Speed: {common_wind_speed}
                     """ 
                                    
