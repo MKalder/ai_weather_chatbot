@@ -15,7 +15,7 @@ From a technical perspective, this project provides a solid foundation for furth
 
 ## Test Questions
 
-<a href="test/test_questions.pdf" target="_blank">Download PDF</a>
+<a href="test/test_questions-v1.0.pdf" target="_blank">Download PDF</a>
 
 ## Architecture
 
