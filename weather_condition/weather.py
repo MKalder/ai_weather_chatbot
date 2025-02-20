@@ -4,7 +4,7 @@ import logging
 import requests #type: ignore
 import os 
 
-from .dialog import DialogHandler
+from .dialog_handler import DialogHandler
 from .date_handler import DateHandler
 
 # Load the .env file
