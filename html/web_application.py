@@ -119,7 +119,7 @@ html_content = '''<!DOCTYPE html>
 <body>
     <div class="container">
         <h1>Weather Chatbot Testing Page</h1>
-        <p>This chatbot provides weather data updates and answers waether related queries. Below are some example questions and expected responses.</p>
+        <p>This chatbot provides weather data updates and answers weather related queries. Below are some example questions and expected responses.</p>
         <h2>Test Questions</h2>
         <table>
             <tr>
