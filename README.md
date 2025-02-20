@@ -9,6 +9,8 @@ The primary motivation behind developing this chatbot stemmed from a deep curios
 
 The chatbot is available for testing here: https://pythonaibot.pythonanywhere.com/
 
+<img src="images/chatbot_images/website/hosted_website.png" alt="Chatbot" width="80%">
+
 From a technical perspective, this project provides a solid foundation for further exploration into the core principles of Natural Language Processing (NLP). While Google Dialogflow ES handles essential NLP tasks such as tokenization, normalization, stemming, and named entity recognition autonomously, developers retain significant control over model training. This includes curating training data (intents), defining context to steer user interactions effectively, and optimizing entity recognition to ensure precise and contextually relevant responses. 
 
 ## Test Questions
