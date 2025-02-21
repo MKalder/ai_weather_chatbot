@@ -48,6 +48,8 @@ class Weather:
 
         # Perform GET request to fetch data
         response = requests.get(self.base_url, params=params)
+        logging.info(response.json())
+        print(response.json())
 
         # Return the JSON response
         return response.json()
@@ -158,7 +160,7 @@ class Weather:
             # Fetch and format the weather data
             speech = self.__fetch_weather(time)
             logging.info(f"🔊 Response: {speech}")
-            return {"fulfillmentText": speech, "displayText": speech}
+            return speech
         except Exception as e:
             logging.error(f"⛔ Error Fetching Weather Data: {e}")
             return self.dialog_handler.handle_error()  # Handle general error
