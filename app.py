@@ -36,31 +36,6 @@ def webhook():
 
     # Process the request using the Weather class
     response = weather.process_request(request_json)
-        
-    response_example = {
-    "fulfillmentMessages": [
-        {
-            "platform": "PLATFORM_UNSPECIFIED",
-            "payload": {
-                "richContent": [
-                    [
-                        {
-                            "type": "description",
-                            "title": "Weather Forecast",
-                            "text": [
-                                "📍 Bangkok",
-                                "📅 Friday, Feb 21, 2025",
-                                "⛅ Weather: Clear Sky",
-                                "🌡️ Temperature: 🔽 27.6°C → 🔼 35.1°C",
-                                "💨 Wind Speed: 2.48 m/s"
-                            ]
-                        }
-                    ]
-                ]
-            }
-        }
-    ]
-}
     
     # Return the response
     return jsonify(response)
