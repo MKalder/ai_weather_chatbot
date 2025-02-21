@@ -11,21 +11,13 @@ FMT: Final = "%Y-%m-%d"
 
 class DialogHandler:
     def __init__(self):
-        """Initialize the DialogHandler class.
-
-        This class is responsible for generating responses to the user's queries
-        based on the current state of the conversation. The responses are based
-        on the parameters provided from the Dialogflow agent.
-
-        Optionally, initialize any state you want to track within the dialog
-        """
         pass
+    @staticmethod
+    def _generate_response(responses: list) -> dict:
+        resp = random.choice(responses)
+        return {"fulfillmentText": resp, "displayText": resp}
 
     def handle_past_date(self) -> dict:
-        """Handle past date query.
-
-        Generate a response to the user if the query date is in the past.
-        """
         responses = [
             "I'm sorry, I can't provide weather data for the past.",
             "I can only give forecasts for today and the next 5 days. ☀️🌧️",
@@ -33,93 +25,33 @@ class DialogHandler:
             "I only have forecasts for today and the next 5 days. Ask away! 😊",
             "Need a forecast? I cover today and the next 5 days! 🌍"
         ]
-        resp = random.choice(responses)
-        return {
-            "fulfillmentText": resp,
-            "displayText": resp
-        }
+        return self._generate_response(responses)
 
     def handle_future_date(self) -> dict:
-        """Handle future date query.
-
-        Generate a response to the user if the query date is in the future.
-        """
         responses = [
-            "I’m sorry, but I can only provide weather forecasts for the next 5 days. Let me know if you’d like a forecast within that range!",
-            "Unfortunately, I can’t predict the weather beyond 5 days. However, I can give you an accurate forecast for the next 5 days if you’d like!",
-            "I can only provide forecasts for up to 5 days ahead. If you need weather details within that timeframe, just let me know!",
-            "I’m sorry, but my forecast limit is 5 days ahead. Would you like the weather for any day within that range?"
+            "I’m sorry, but I can only provide weather forecasts for the next 5 days.",
+            "Unfortunately, I can’t predict the weather beyond 5 days.",
+            "I can only provide forecasts for up to 5 days ahead.",
+            "I’m sorry, but my forecast limit is 5 days ahead."
         ]
-        # Choose a random response to return
-        resp = random.choice(responses)
-        
-        # Return the response in a dictionary
-        return {
-            "fulfillmentText": resp,
-            "displayText": resp
-        }
+        return self._generate_response(responses)
 
     def handle_missing_city(self) -> dict:
-        """Handle missing city query.
-
-        Generate a response to the user if the query city is missing.
-        """
-        # List of possible responses
         responses = [
             "Which city do you want the weather for? 🌍",
             "Tell me a city, and I'll fetch the forecast! ☀️🌧",
             "Where should I check the weather for? 🏙️",
-            "Which location are you curious about? 🌎",
-            "Enter a city name, and I'll do the rest! ⛅",
-            "Where are we checking the weather today? 📍",
-            "Tell me your city, and I'll bring the latest forecast! 🌦",
-            "Which city’s weather would you like to see? 🌤️",
-            "Just type a city, and I'll get the forecast! 🌍",
-            "Tell me a city, and I’ll bring you the latest weather! ☀️",
-            "Drop a city name, and I’ll fetch the forecast! 🌦",
-            "Type a location, and I'll show you the weather! 📍",
-            "Give me a city, and I'll handle the rest! 🌎",
-            "Share a city name, and I'll pull up the weather! 🌤",
-            "Let me know a city, and I’ll check the forecast! 🌧"
+            "Just type a city, and I'll get the forecast! 🌍"
         ]
-        # Choose a random response to return
-        resp = random.choice(responses)
-        
-        # Return the response in a dictionary
-        return {
-            "fulfillmentText": resp,
-            "displayText": resp
-        }
+        return self._generate_response(responses)
 
     def handle_error(self) -> dict:
-        """
-        Handle errors when fetching weather data.
-
-        If an error occurs while fetching the weather, this function will generate a response
-        to the user. The response will be a random choice from a list of possible responses.
-
-        Returns:
-            A dictionary containing the response to the user.
-        """
-        # List of possible responses
         responses = [
             "I'm sorry, I couldn't fetch the weather. Can you please try again?",
-            "Oops! Something went wrong while fetching the weather. Let's try again.",
-            "I'm having trouble fetching the weather. Can you please try again?",
-            "I can't seem to get the weather right now. Let's try again.",
-            "There was an error while fetching the weather. Can you try again?",
-            "I'm sorry, I couldn't get the weather. Let's try again.",
-            "There was a problem while fetching the weather. Can you try again?",
+            "Oops! Something went wrong while fetching the weather.",
             "I'm having trouble fetching the weather. Can you please try again?"
         ]
-        # Choose a random response to return
-        resp = random.choice(responses)
-        
-        # Return the response in a dictionary
-        return {
-            "fulfillmentText": resp,
-            "displayText": resp
-        }
+        return self._generate_response(responses)
     
     def __select_dates(self, time, selected_dates):
         """
@@ -170,9 +102,9 @@ class DialogHandler:
             
             # Get the emoji for the first attribute in the list, if it exists
             return condition_emojis.get(attribute_list[0].lower(), None)
-        
-        # Return None if the attribute list is empty
-        return None
+        else:
+            # Return None if the attribute list is empty
+            return None
 
     def __emoij_condition(self, condition: list) -> str:
         """
@@ -394,37 +326,11 @@ class DialogHandler:
         
         return forecast_report
 
-
-
     def format_weather_response(self, forecast: dict) -> json:
         logging.info("📅⚙️ Formatting weather response...")
 
-        location = forecast.get("location", "Unknown Location")  # Default if missing
-        conditions = forecast.get("conditions", [])  # Default to an empty list if missing
-        
-        if not conditions:
-            return {
-                "fulfillmentMessages": [
-                    {
-                        "platform": "PLATFORM_UNSPECIFIED",
-                        "payload": {
-                            "richContent": [
-                                [
-                                    {
-                                        "type": "description",
-                                        "title": "Weather Forecast",
-                                        "text": [
-                                            f"📍 {location}",
-                                            "No forecast data available."
-                                        ]
-                                    }
-                                ]
-                            ]
-                        }
-                    }
-                ]
-            }
-
+        location = forecast.get("location", "Unknown Location")  
+        conditions = forecast.get("conditions", "Unknown Conditions")  
         # Create forecast messages for multiple days
         forecast_texts = []
         
