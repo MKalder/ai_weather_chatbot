@@ -1,4 +1,4 @@
-from flask import Flask, request, make_response, render_template_string #type: ignore
+from flask import Flask, request, make_response, render_template_string, jsonify #type: ignore
 from flask_cors import CORS,cross_origin #type: ignore
 import json
 
@@ -36,17 +36,9 @@ def webhook():
 
     # Process the request using the Weather class
     response = weather.process_request(request_json)
-
-    # Convert the response to a JSON string
-    response_json = json.dumps(response)
-
-    # Set the Content-Type header to application/json
-    response_headers = {
-        'Content-Type': 'application/json'
-    }
     
     # Return the response
-    return make_response(response_json, response_headers)
+    return jsonify(response)
 
 if __name__ == "__main__":
     """

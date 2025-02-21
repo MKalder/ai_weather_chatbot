@@ -1,6 +1,7 @@
 from collections import defaultdict, Counter
 from datetime import datetime
 from typing import Final
+import json
 import random
 import logging
 
@@ -10,21 +11,13 @@ FMT: Final = "%Y-%m-%d"
 
 class DialogHandler:
     def __init__(self):
-        """Initialize the DialogHandler class.
-
-        This class is responsible for generating responses to the user's queries
-        based on the current state of the conversation. The responses are based
-        on the parameters provided from the Dialogflow agent.
-
-        Optionally, initialize any state you want to track within the dialog
-        """
         pass
+    @staticmethod
+    def _generate_response(responses: list) -> dict:
+        resp = random.choice(responses)
+        return {"fulfillmentText": resp, "displayText": resp}
 
     def handle_past_date(self) -> dict:
-        """Handle past date query.
-
-        Generate a response to the user if the query date is in the past.
-        """
         responses = [
             "I'm sorry, I can't provide weather data for the past.",
             "I can only give forecasts for today and the next 5 days. ☀️🌧️",
@@ -32,93 +25,33 @@ class DialogHandler:
             "I only have forecasts for today and the next 5 days. Ask away! 😊",
             "Need a forecast? I cover today and the next 5 days! 🌍"
         ]
-        resp = random.choice(responses)
-        return {
-            "fulfillmentText": resp,
-            "displayText": resp
-        }
+        return self._generate_response(responses)
 
     def handle_future_date(self) -> dict:
-        """Handle future date query.
-
-        Generate a response to the user if the query date is in the future.
-        """
         responses = [
-            "I’m sorry, but I can only provide weather forecasts for the next 5 days. Let me know if you’d like a forecast within that range!",
-            "Unfortunately, I can’t predict the weather beyond 5 days. However, I can give you an accurate forecast for the next 5 days if you’d like!",
-            "I can only provide forecasts for up to 5 days ahead. If you need weather details within that timeframe, just let me know!",
-            "I’m sorry, but my forecast limit is 5 days ahead. Would you like the weather for any day within that range?"
+            "I’m sorry, but I can only provide weather forecasts for the next 5 days.",
+            "Unfortunately, I can’t predict the weather beyond 5 days.",
+            "I can only provide forecasts for up to 5 days ahead.",
+            "I’m sorry, but my forecast limit is 5 days ahead."
         ]
-        # Choose a random response to return
-        resp = random.choice(responses)
-        
-        # Return the response in a dictionary
-        return {
-            "fulfillmentText": resp,
-            "displayText": resp
-        }
+        return self._generate_response(responses)
 
     def handle_missing_city(self) -> dict:
-        """Handle missing city query.
-
-        Generate a response to the user if the query city is missing.
-        """
-        # List of possible responses
         responses = [
             "Which city do you want the weather for? 🌍",
             "Tell me a city, and I'll fetch the forecast! ☀️🌧",
             "Where should I check the weather for? 🏙️",
-            "Which location are you curious about? 🌎",
-            "Enter a city name, and I'll do the rest! ⛅",
-            "Where are we checking the weather today? 📍",
-            "Tell me your city, and I'll bring the latest forecast! 🌦",
-            "Which city’s weather would you like to see? 🌤️",
-            "Just type a city, and I'll get the forecast! 🌍",
-            "Tell me a city, and I’ll bring you the latest weather! ☀️",
-            "Drop a city name, and I’ll fetch the forecast! 🌦",
-            "Type a location, and I'll show you the weather! 📍",
-            "Give me a city, and I'll handle the rest! 🌎",
-            "Share a city name, and I'll pull up the weather! 🌤",
-            "Let me know a city, and I’ll check the forecast! 🌧"
+            "Just type a city, and I'll get the forecast! 🌍"
         ]
-        # Choose a random response to return
-        resp = random.choice(responses)
-        
-        # Return the response in a dictionary
-        return {
-            "fulfillmentText": resp,
-            "displayText": resp
-        }
+        return self._generate_response(responses)
 
     def handle_error(self) -> dict:
-        """
-        Handle errors when fetching weather data.
-
-        If an error occurs while fetching the weather, this function will generate a response
-        to the user. The response will be a random choice from a list of possible responses.
-
-        Returns:
-            A dictionary containing the response to the user.
-        """
-        # List of possible responses
         responses = [
             "I'm sorry, I couldn't fetch the weather. Can you please try again?",
-            "Oops! Something went wrong while fetching the weather. Let's try again.",
-            "I'm having trouble fetching the weather. Can you please try again?",
-            "I can't seem to get the weather right now. Let's try again.",
-            "There was an error while fetching the weather. Can you try again?",
-            "I'm sorry, I couldn't get the weather. Let's try again.",
-            "There was a problem while fetching the weather. Can you try again?",
+            "Oops! Something went wrong while fetching the weather.",
             "I'm having trouble fetching the weather. Can you please try again?"
         ]
-        # Choose a random response to return
-        resp = random.choice(responses)
-        
-        # Return the response in a dictionary
-        return {
-            "fulfillmentText": resp,
-            "displayText": resp
-        }
+        return self._generate_response(responses)
     
     def __select_dates(self, time, selected_dates):
         """
@@ -169,9 +102,9 @@ class DialogHandler:
             
             # Get the emoji for the first attribute in the list, if it exists
             return condition_emojis.get(attribute_list[0].lower(), None)
-        
-        # Return None if the attribute list is empty
-        return None
+        else:
+            # Return None if the attribute list is empty
+            return None
 
     def __emoij_condition(self, condition: list) -> str:
         """
@@ -186,7 +119,7 @@ class DialogHandler:
         # Find the emoji for the first condition in the list
         return self.__find_weather_attribute("condition", condition)
        
-    def __forecast_body(self, selected_dates, daily_forecasts) -> str:
+    def __forecast_body(self, selected_dates, daily_forecasts) -> list:
         """Formats the forecast body using the data from the API response.
 
         Args:
@@ -194,38 +127,43 @@ class DialogHandler:
             daily_forecasts (dict): A dictionary of daily forecasts with the date as the key.
 
         Returns:
-            str: The formatted forecast body.
+            list: A list of formatted forecast entries.
         """
-        logging.info("📅⚙️ Formatting forecast body complete")
-        forecast = ""
+        forecast = []
         
         # Iterate over the selected dates
         for date in selected_dates:
-            daily_entries = daily_forecasts[date]
+            daily_entries = daily_forecasts.get(date, [])
+            if not daily_entries:
+                continue  # Skip if no forecast data available
+            
             date_obj = datetime.strptime(date, "%Y-%m-%d")
             formatted_date = date_obj.strftime("%A, %b %d, %Y")
-            
+
             # Determine the most common weather description
             weather_descriptions = [entry['weather'][0]['description'].title() for entry in daily_entries]
-            most_common_weather = Counter(weather_descriptions).most_common(1)[0][0]
-            
+            most_common_weather = Counter(weather_descriptions).most_common(1)
+            most_common_weather = most_common_weather[0][0] if most_common_weather else "Unknown"
+
             # Determine the temperature range
             temperatures = [entry['main']['temp'] for entry in daily_entries]
-            min_temp, max_temp = min(temperatures), max(temperatures)
+            min_temp, max_temp = (min(temperatures), max(temperatures)) if temperatures else (0, 0)
             temp_info = f"🔽 {min_temp:.1f}°C → 🔼 {max_temp:.1f}°C"
-            
+
             # Determine the most common wind speed
             wind_speeds = [entry['wind']['speed'] for entry in daily_entries]
-            most_common_wind_speed = Counter(wind_speeds).most_common(1)[0][0]
-            
+            most_common_wind_speed = Counter(wind_speeds).most_common(1)
+            most_common_wind_speed = most_common_wind_speed[0][0] if most_common_wind_speed else 0
+
             # Assemble the forecast
-            forecast += f"""
-                📅 {formatted_date}
-                ⛅ Weather:  {most_common_weather}
-                🌡️ Temperature: {temp_info}
-                💨 Wind Speed: {most_common_wind_speed} m/s
-            """
+            forecast.append({
+                "date": formatted_date,
+                "weather": most_common_weather,
+                "temperature": temp_info,
+                "wind_speed": f"{most_common_wind_speed} m/s"
+            })
         
+        logging.info("📅⚙️ Formatting forecast body complete")  # Log after processing
         return forecast
     
     def __forecast_body_condition(self, selected_dates, daily_forecasts, condition) -> str:
@@ -241,7 +179,7 @@ class DialogHandler:
             str: The formatted forecast body with the weather condition.
         """
         logging.info(f"📅⚙️ Formatting forecast body {condition}")
-        forecast = ""
+        forecast = []
         
         common_weather = []
         print(f"Type: {type(condition)}")
@@ -259,15 +197,16 @@ class DialogHandler:
             common_we = Counter(common_weather).most_common(1)[0][0]
              
             emoji = self.__emoij_condition(condition)
-            common_w = f"{emoji} Weather: {common_we}"   
+            common_w = f"{emoji} {common_we}"   
             date_obj = datetime.strptime(date, "%Y-%m-%d")
             formatted_date = date_obj.strftime("%A, %b %d, %Y")
-                
-            forecast += f"""
-                    📅 {formatted_date}
-                    {common_w}
-                    """ 
-                                   
+             
+             # Assemble the forecast
+            forecast.append({
+                "date": formatted_date,
+                "weather": common_w
+            })      
+                                
         return forecast
     
     def __forecast_body_temperature(self, selected_dates, daily_forecasts, temperature) -> str:
@@ -283,7 +222,7 @@ class DialogHandler:
             str: The formatted forecast body with the temperature information.
         """
         print(f"📅⚙️ Formatting forecast body {temperature}")
-        forecast = ""
+        forecast = []
         
         # Iterate over the selected dates
         for date in selected_dates:
@@ -293,17 +232,19 @@ class DialogHandler:
             # Extract the temperatures from the daily entries
             temperatures = [entry['main']['temp'] for entry in daily_entries]
             min_temp, max_temp = min(temperatures), max(temperatures)
-            temp_info = f" {min_temp:.1f}°C \n 🌡️🔼 Temperature:  {max_temp:.1f}°C"
+            temp_info = f"🔽 {min_temp:.1f}°C \n 🔼{max_temp:.1f}°C"
                  
             # Format the date
             date_obj = datetime.strptime(date, "%Y-%m-%d")
             formatted_date = date_obj.strftime("%A, %b %d, %Y")
                 
             # Assemble the forecast
-            forecast += f"""
-                    📅 {formatted_date}
-                    🌡️🔽 Temperature: {temp_info}
-                    """                
+            forecast.append({
+                "date": formatted_date,
+                "temperature": temp_info
+            })
+        
+        logging.info("📅⚙️ Formatting forecast body complete")             
         return forecast
     
     def __forecast_body_wind_speed(self, selected_dates, daily_forecasts, wind_speed) -> str:
@@ -319,7 +260,7 @@ class DialogHandler:
             str: The formatted forecast body with the wind speed information.
         """
         print(f"📅⚙️ Formatting forecast body {wind_speed}")
-        forecast = ""
+        forecast = []
         
         # Iterate over the selected dates
         for date in selected_dates:
@@ -336,15 +277,14 @@ class DialogHandler:
             formatted_date = date_obj.strftime("%A, %b %d, %Y")
                 
             # Assemble the forecast
-            forecast += f"""
-                    📅 {formatted_date}
-                    Wind Speed: {common_wind_speed}
-                    """ 
+            forecast.append({
+                "date": formatted_date,
+                "wind_speed": f"{common_wind_speed} m/s"
+            })
                                    
         return forecast
-
     
-    def __forecast_formatter(self, selected_dates: list, forecast_data: dict, daily_forecasts: dict, condition=None, temperature=None, wind_speed=None) -> str:
+    def __forecast_formatter(self, selected_dates: list, forecast_data: dict, daily_forecasts: dict, condition=None, temperature=None, wind_speed=None) -> dict:
         """
         Formats the forecast output according to the specified condition, temperature, or wind speed.
         
@@ -357,28 +297,85 @@ class DialogHandler:
             wind_speed (str, optional): The wind speed to filter the forecast by. Defaults to None.
             
         Returns:
-            str: The formatted forecast output.
+            dict: The forecast output as a dictionary.
         """
         print("📅⚙️ Formatting forecast output...")
-        forecast_report = f"""📍{forecast_data['city']['name']}:
-        """
+        forecast_report = {
+             "location": forecast_data["city"]["name"]
+        }
+        
         if condition:
             # Filter the forecast by condition
-            forecast_report += self.__forecast_body_condition(selected_dates, daily_forecasts, condition)
-            return forecast_report 
+            #forecast_report += self.__forecast_body_condition(selected_dates, daily_forecasts, condition)
+            forecast_report["conditions"]=(self.__forecast_body_condition(selected_dates, daily_forecasts, condition))
+            #return forecast_report 
         elif temperature:
             # Filter the forecast by temperature
-            forecast_report += self.__forecast_body_temperature(selected_dates, daily_forecasts, temperature)
-            return  forecast_report
+            #forecast_report += self.__forecast_body_temperature(selected_dates, daily_forecasts, temperature)
+            forecast_report["conditions"]=(self.__forecast_body_temperature(selected_dates, daily_forecasts, temperature))
+            #return  forecast_report
         elif wind_speed:
             # Filter the forecast by wind speed
-            forecast_report += self.__forecast_body_wind_speed(selected_dates, daily_forecasts, wind_speed)
-            return forecast_report
+            #forecast_report += self.__forecast_body_wind_speed(selected_dates, daily_forecasts, wind_speed)
+            forecast_report["conditions"]=(self.__forecast_body_wind_speed(selected_dates, daily_forecasts, wind_speed))
+            #return forecast_report
         else:
             # Return the full forecast
-            forecast_report += self.__forecast_body(selected_dates, daily_forecasts)
-            return forecast_report
-          
+            #forecast_report += self.__forecast_body(selected_dates, daily_forecasts)
+            forecast_report["conditions"]=(self.__forecast_body(selected_dates, daily_forecasts))
+        
+        return forecast_report
+
+    def format_weather_response(self, forecast: dict) -> json:
+        logging.info("📅⚙️ Formatting weather response...")
+
+        location = forecast.get("location", "Unknown Location")  
+        conditions = forecast.get("conditions", "Unknown Conditions")  
+        # Create forecast messages for multiple days
+        forecast_texts = []
+        
+        for day in conditions:
+            print(day)
+            details = []
+
+            # Add only if not "Unknown"
+            if day.get('date') and day.get('date') != "Unknown Date":
+                details.append(f"📅 {day['date']}")
+            if day.get('weather') and day.get('weather') != "Unknown":
+                details.append(f"⛅ Weather: {day['weather']}")
+            if day.get('temperature') and day.get('temperature') != "Unknown":
+                details.append(f"🌡️ Temperature: {day['temperature']}")
+            if day.get('wind_speed') and day.get('wind_speed') != "Unknown":
+                details.append(f"💨 Wind Speed: {day['wind_speed']}")
+
+            if details:  # Only add if there’s at least one valid detail
+                forecast_texts.append("\n".join(details))
+
+            # Build response
+            response = {
+                "fulfillmentMessages": [
+                    {
+                        "platform": "PLATFORM_UNSPECIFIED",
+                        "payload": {
+                            "richContent": [
+                                [
+                                    {
+                                        "type": "description",
+                                        "title": "Weather Forecast",
+                                        "text": [
+                                            f"📍 {location}",
+                                            *forecast_texts,  
+                                        ]
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+
+        return response
+    
     def format_forecast_output(self, weather, time, forecast_data: dict) -> str:
         """
         Formats the forecast output based on the specified condition, temperature, or wind speed.
@@ -408,5 +405,6 @@ class DialogHandler:
             
         # Format the forecast
         forecast = self.__forecast_formatter(selected_dates, forecast_data, daily_forecasts, weather.condition, weather.temperature, weather.wind_speed)
+        formatted = self.format_weather_response(forecast)
 
-        return forecast
+        return formatted
